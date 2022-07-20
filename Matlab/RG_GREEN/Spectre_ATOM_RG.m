@@ -1,152 +1,115 @@
+%% Load all variables
 load Vars_RG.mat
 
-spectrum_max = max(spectrum); % find max in spectrum
-spectrum_norm = spectrum/spectrum_max; % normalize spectrum
+%% Load ThorLabs variable and convert to double
 
-spectrum_mS_fit = fit(lungime_unda_mS, spectrum_mS,'gauss1'); % fitting of spectrum_mS
-spectrum_norm_fit = fit(lungime_unda_d,spectrum_norm_d,'gauss8'); %fitting of spectrum_norm
+RG_GREEN = load ('RG_GREEN.mat');
+wavelength_d = double(RG_GREEN.wavelength_nmAir);
+spectrum_d = double(RG_GREEN.spectrum);
 
-spectrum_mS_norm = normalize(spectrum_mS_2,'norm','inf'); % normalize with function
-spectrum_norm1 = normalize(spectrum,'norm','inf'); % normalize with function
+%% Normalize and fit
 
-%% Plot mormalized values
+spectrum_TL_norm = normalize(spectrum_d,'norm','inf'); % ThorLabs values normalized
+spectrum_AS_norm = normalize(spectrum_AS,'norm','inf'); % AS7262 values normalized
+
+spectrum_TL_fit = fit(wavelength_d, spectrum_TL_norm,'gauss8'); %fitting of ThorLabs normalized spectrum
+spectrum_AS_fit = fit(wavelength_AS, spectrum_AS_norm,'gauss1'); % fitting of AS7262 normalized spectrum
+
+
+%% Plot normalized spectrums
 
 figure(1)
 subplot(2,2,1);
-plot(lungime_unda_mS,spectrum_mS);
+plot(wavelength_d,spectrum_TL_norm);
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Normalize Excel AS7262");
+title("RG GREEN ThorLabs Normalized spectrum");
 
 subplot(2,2,2);
-plot(lungime_unda_mS,spectrum_mS_norm);
+plot(wavelength_AS,spectrum_AS_norm);
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Normalize function AS7262");
+title("RG GREEN AS7262 Normalized spectrum");
 
-subplot(2,2,3);
-plot(lungime_unda,spectrum_norm);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Normalize Excel ThorLabs");
-
-subplot(2,2,4);
-plot(lungime_unda,spectrum_norm1);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Normalize function ThorLabs");
-
-
-%{
 subplot(2,2,[3,4]);
-plot(lungime_unda,spectrum_norm,'b',lungime_unda,spectrum_norm1,'g');
+plot(wavelength_d,spectrum_TL_norm,'b',wavelength_AS,spectrum_AS_norm,'r');
 axis([450 650 0 inf])
-legend("Normalize Excel","Normalize function");
+legend("ThorLabs","AS7262");
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-%}
+title("RG GREEN ThorLabs and AS7262 Normalized spectrum");
 
-%% Plot on the same figure
+
+%% Plot fitted spectrums with normalized spectrum
 
 figure(2)
-plot(spectrum_norm_fit,'b');
-hold on;
-plot(spectrum_mS_fit,'r');
-hold on;
-legend("RG GREEN ThorLabs", "RG GREEN AS7262");
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Emission spectrum");
-
-
-%% Plot on the different figs
-
-figure(3)
 subplot(2,1,1);
-plot(spectrum_norm_fit,lungime_unda,spectrum_norm);
+plot(spectrum_TL_fit,wavelength_d,spectrum_TL_norm);
 axis([450 650 0 inf])
 legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Emission spectrum ThorLabs")
+title("RG GREEN ThorLabs fitted emission spectrum ")
 
 subplot(2,1,2);
-plot(spectrum_mS_fit,lungime_unda_mS,spectrum_mS);
+plot(spectrum_AS_fit,wavelength_AS,spectrum_AS_norm);
 axis([450 650 0 inf])
 legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Emission spectrum AS7262")
+title("RG GREEN AS7262 fitted emission spectrum ")
 
-
-%% Peak detect
-
-
-figure(1)
-S_plot = plot(spectrum_norm_fit,'b');
-hold on;
-mS_plot = plot(spectrum_mS_fit,'r');
-axis([450 650 0 inf])
-legend("ThorLab fitted curve","AS7262 fitted curve");
-hold on;
-
-S_xData = get(S_plot,'xData');
-S_yData = get(S_plot,'yData');
-
-mS_xData = get(mS_plot,'xData');
-mS_yData = get(mS_plot,'yData');
-
-figure(2)
-subplot(2,1,1);
-plot(S_xData,S_yData);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Fitted Emission spectrum ThorLabs")
-
-subplot(2,1,2);
-plot(mS_xData,mS_yData);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Emission spectrum AS7262")
+%% Plot only fitted spectrums and detect peaks
 
 figure(3)
-[S_peaks,locs1]=findpeaks(S_yData,'MinPeakHeight', 0.5);
-[mS_peaks,locs2]=findpeaks(mS_yData,'MinPeakHeight', 0.5);
-
-subplot(2,1,1);
-plot(S_xData,S_yData,S_xData(locs1),S_peaks,'or')
+TL_plot = plot(spectrum_TL_fit,'b');
+hold on;
+AS_plot = plot(spectrum_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262");
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Peaks Emission spectrum ThorLabs")
+title("RG GREEN Emission spectrum");
+
+% Peak detect
+
+TL_xData = get(TL_plot,'xData');
+TL_yData = get(TL_plot,'yData');
+
+AS_xData = get(AS_plot,'xData');
+AS_yData = get(AS_plot,'yData');
+
+
+[TL_peaks,locs1]=findpeaks(TL_yData,'MinPeakHeight', 0.5);
+[AS_peaks,locs2]=findpeaks(AS_yData,'MinPeakHeight', 0.5);
+
+figure(4)
+
+plot(TL_xData,TL_yData,TL_xData(locs1),TL_peaks,'or')
+hold on;
+plot(AS_xData,AS_yData,AS_xData(locs2),AS_peaks,'or')
+axis([450 650 0 inf])
+legend("ThorLabs","ThorLabs Peak","AS7262","AS7262 Peak");
+xlabel("Wavelength [nm]");
+ylabel("Intensity");
+title("RG GREEN Peaks")
+
+
+figure(5)
+subplot(2,1,1);
+plot(TL_xData,TL_yData,TL_xData(locs1),TL_peaks,'or')
+axis([450 650 0 inf])
+xlabel("Wavelength [nm]");
+ylabel("Intensity");
+title("RG GREEN ThorLabs Peaks")
 
 subplot(2,1,2);
-plot(mS_xData,mS_yData,mS_xData(locs2),mS_peaks,'or')
+plot(AS_xData,AS_yData,AS_xData(locs2),AS_peaks,'or')
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Peaks Emission spectrum AS7262")
-
-
-%{
-figure(1)
-hPlot = plot(spectrum_mS_fit);
-xData = get(hPlot,'xData');
-yData = get(hPlot,'yData');
-
-figure(2)
-plot(xData,yData);
-
-figure(3)
-[mS_peaks,locs]=findpeaks(yData,'MinPeakHeight', 0.5);
-plot(xData,yData,xData(locs),mS_peaks,'or')
-%}
-
+title("RG GREEN AS7262 Peaks")
 

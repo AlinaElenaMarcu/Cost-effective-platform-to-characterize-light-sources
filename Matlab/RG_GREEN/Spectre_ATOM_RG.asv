@@ -1,87 +1,81 @@
-load Vars.mat
+%% Load all variables
+load Vars_RG.mat
 
-spectrum_max = max(spectrum); % find max in spectrum
-spectrum_norm = spectrum/spectrum_max; % normalize spectrum
+%% Load ThorLabs variable and convert to double
 
-spectrum_mS_fit = fit(lungime_unda_mS, spectrum_mS,'gauss1'); % fitting of spectrum_mS
-spectrum_norm_fit = fit(lungime_unda_d,spectrum_norm_d,'gauss8'); %fitting of spectrum_norm
+RG_GREEN = load ('RG_GREEN.mat');
+wavelength_d = double(RG_GREEN.wavelength_nmAir);
+spectrum_d = double(RG_GREEN.spectrum);
 
-spectrum_mS_norm = normalize(spectrum_mS_2,'norm','inf'); % normalize with function
-spectrum_norm1 = normalize(spectrum,'norm','inf'); % normalize with function
+%% Normalize and fit
 
-%% Plot mormalized values
+spectrum_TL_norm = normalize(spectrum_d,'norm','inf'); % ThorLabs values normalized
+spectrum_AS_norm = normalize(spectrum_AS,'norm','inf'); % AS7262 values normalized
+
+spectrum_TL_fit = fit(wavelength_d, spectrum_TL_norm,'gauss8'); %fitting of ThorLabs normalized spectrum
+spectrum_AS_fit = fit(wavelength_AS, spectrum_AS_norm,'gauss1'); % fitting of AS7262 normalized spectrum
+
+
+%% Plot normalized spectrums
 
 figure(1)
 subplot(2,2,1);
-plot(lungime_unda_mS,spectrum_mS);
+plot(wavelength_d,spectrum_TL_norm);
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Normalize Excel AS7262");
+title("ThorLabs Normalized spectrum");
 
 subplot(2,2,2);
-plot(lungime_unda_mS,spectrum_mS_norm);
+plot(wavelength_AS,spectrum_AS_norm);
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-title("Normalize function AS7262");
+title("AS7262 Normalized spectrum");
 
-subplot(2,2,3);
-plot(lungime_unda,spectrum_norm);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Normalize Excel ThorLabs");
-
-subplot(2,2,4);
-plot(lungime_unda,spectrum_norm1);
-axis([450 650 0 inf])
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Normalize function ThorLabs");
-
-
-%{
 subplot(2,2,[3,4]);
-plot(lungime_unda,spectrum_norm,'b',lungime_unda,spectrum_norm1,'g');
+plot(wavelength_d,spectrum_TL_norm,'b',wavelength_AS,spectrum_AS_norm,'r');
 axis([450 650 0 inf])
-legend("Normalize Excel","Normalize function");
+legend("ThorLabs","AS7262");
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
-%}
+title("ThorLabs and AS7262 Normalized spectrum");
 
-%% Plot on the same figure
+
+%% Plot fitted spectrums with normalized spectrum
 
 figure(2)
-plot(spectrum_norm_fit,'b');
+subplot(2,1,1);
+plot(spectrum_TL_fit,wavelength_d,spectrum_TL_norm);
+axis([450 650 0 inf])
+legend("Data","Fitted curve");
+xlabel("Wavelength [nm]");
+ylabel("Intensity");
+title("ThorLabs fitted emission spectrum ")
+
+subplot(2,1,2);
+plot(spectrum_AS_fit,wavelength_AS,spectrum_AS_norm);
+axis([450 650 0 inf])
+legend("Data","Fitted curve");
+xlabel("Wavelength [nm]");
+ylabel("Intensity");
+title("AS7262 fitted emission spectrum ")
+
+%% Plot only fitted spectrums
+
+figure(3)
+plot(spectrum_TL_fit,'b');
 hold on;
-plot(spectrum_mS_fit,'r');
+plot(spectrum_AS_fit,'r');
 hold on;
-legend("RG GREEN ThorLabs", "RG GREEN AS7262");
+legend("ThorLabs", "RG GREEN AS7262");
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
 title("Emission spectrum");
 
 
-%% Plot on the different figs
 
-figure(3)
-subplot(2,1,1);
-plot(spectrum_norm_fit,lungime_unda,spectrum_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve");
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Emission spectrum ThorLabs")
-
-subplot(2,1,2);
-plot(spectrum_mS_fit,lungime_unda_mS,spectrum_mS);
-axis([450 650 0 inf])
-legend("Data","Fitted curve");
-xlabel("Wavelength [nm]");
-ylabel("Intensity");
-title("Emission spectrum AS7262")
 
 
 %% Peak detect
@@ -89,11 +83,10 @@ title("Emission spectrum AS7262")
 
 figure(1)
 S_plot = plot(spectrum_norm_fit,'b');
-axis([450 650 0 inf])
-leg
 hold on;
 mS_plot = plot(spectrum_mS_fit,'r');
 axis([450 650 0 inf])
+legend("ThorLab fitted curve","AS7262 fitted curve");
 hold on;
 
 S_xData = get(S_plot,'xData');

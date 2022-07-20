@@ -1,9 +1,15 @@
 load D:\Proiecte\GitHub\LEDChar_ATOM2022\Matlab\Flash\Vars_Flash.mat
 
+
+%% Convert values from ThorLabs to double
+
+lungime_unda_d = double(lungime_unda);
+spectrum_d = double(spectrum);
+
 %% Normalize values
 
-spectrum_max = max(spectrum); % find max in spectrum
-spectrum_norm1 = spectrum/spectrum_max; % normalize spectrum
+spectrum_max = max(spectrum_d); % find max in spectrum
+spectrum_norm1 = spectrum_d/spectrum_max; % normalize spectrum
 
 spectrum_mS_norm = normalize(spectrum_mS,'norm','inf'); % normalize with function
 spectrum_norm = normalize(spectrum,'norm','inf'); % normalize with function
