@@ -10,9 +10,6 @@ FLASH = load ('Flash.mat');
 wavelength_d = double(FLASH.wavelength_nmAir);
 spectrum_d = double(FLASH.spectrum);
 
-load spectrum_AS.mat
-load wavelength_AS.mat
-
 %% Normalize and fit
 
 spectrum_TL_norm = normalize(spectrum_d,'norm','inf'); % ThorLabs values normalized
@@ -87,20 +84,21 @@ TL_yData = get(TL_plot,'yData');
 AS_xData = get(AS_plot,'xData');
 AS_yData = get(AS_plot,'yData');
 
-
 figure(4)
-spectrum_TL_fit_smooth = smooth(TL_xData,'moving');
-wavelength_d_smooth = smooth(TL_yData,'moving');
-TL_smooth_plot = plot(spectrum_TL_fit_smooth,wavelength_d_smooth);
+spectrum_norm_fit_smooth = smooth(TL_xData,'moving');
+lungime_unda_d_smooth = smooth(TL_yData,'moving');
+TL_smooth_plot = plot(spectrum_norm_fit_smooth,lungime_unda_d_smooth);
 
 TL_smooth_xData = get(TL_smooth_plot,'xData');
-TL_smooth_yData = get(TL_smooth_plot,'yData');
+TL_smooth_yData = get(TL__smooth_plot,'yData');
 
-[TL_peaks,locs1]=findpeaks(TL_smooth_yData,'MinPeakHeight', 0.3);
+
+[TL_peaks,locs1]=findpeaks(TL_smooth_yData,'MinPeakHeight', 0.5);
 [AS_peaks,locs2]=findpeaks(AS_yData,'MinPeakHeight', 0.5);
 
 figure(5)
-plot(TL_smooth_xData,TL_smooth_yData,TL_smooth_xData(locs1),TL_peaks,'or')
+
+plot(TL_smooth_xData,TL_yData,TL_xData(locs1),TL_peaks,'or')
 hold on;
 plot(AS_xData,AS_yData,AS_xData(locs2),AS_peaks,'or')
 axis([450 650 0 inf])
@@ -109,9 +107,10 @@ xlabel("Wavelength [nm]");
 ylabel("Intensity");
 title("Flash Peaks")
 
+
 figure(6)
 subplot(2,1,1);
-plot(TL_smooth_xData,TL_smooth_yData,TL_smooth_xData(locs1),TL_peaks,'or')
+plot(TL_xData,TL_yData,TL_xData(locs1),TL_peaks,'or')
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity");
