@@ -1,3 +1,6 @@
+%% clear workspace
+clear workspace
+
 %% Load all variables
 load Vars_RG.mat
 
