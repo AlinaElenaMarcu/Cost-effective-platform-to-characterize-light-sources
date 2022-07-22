@@ -1,1 +1,1 @@
-# LEDChar_ATOM2022
+# Cost-effective platform to characterize light sources
