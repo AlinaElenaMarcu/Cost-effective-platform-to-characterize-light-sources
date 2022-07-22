@@ -1,4 +1,4 @@
-function [] = AS7262_GetDatafromCSV(LoadPath,SavePath)
+function [] = GetDatafromCSV(LoadPath,SavePath)
 
 % Check to make sure that folder actually exists.  Warn user if it doesn't.
 if ~isfolder(LoadPath)
