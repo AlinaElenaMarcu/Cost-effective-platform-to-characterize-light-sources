@@ -22,12 +22,16 @@ for k = 1 : length(theFiles)
 
     wavelenght_AS = table2array(T(1:1,8:13))';
     
-    raw_spectrum_nonC = T(2:end,1:6);
-    raw_spectrum_C = T(2:end,8:13);
+    
+   raw_spectrum_nonC = T(2:end,1:6);
+   raw_spectrum_C = T(2:end,8:13);
+  
 
-    spectrum_nonC = mean(raw_spectrum_nonC{2:end,:},'omitnan')';
-    spectrum_C = mean(raw_spectrum_C{2:end,:},'omitnan')';
+   spectrum_nonC = mean(raw_spectrum_nonC{2:end,:},'omitnan')';
+   spectrum_C = mean(raw_spectrum_C{2:end,:},'omitnan')';
+   
 
-    save(strcat(fullfile(SavePath,baseFileName(1:end-4)),'.mat'),'spectrum_nonC','spectrum_C','wavelenght_AS');
+   save(strcat(fullfile(SavePath,baseFileName(1:end-4)),'.mat'),'spectrum_nonC','spectrum_C','wavelenght_AS');
+   
 end
 end
