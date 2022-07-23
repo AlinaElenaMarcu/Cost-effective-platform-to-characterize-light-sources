@@ -3,7 +3,7 @@
 
 %% Load BLUE1_KING variable and convert to double
 
-% ThorLabs variable and convert to double
+% ThorLabs variable
 BLUE1_KING_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\BLUE_LEDs\BLUE1_KING.mat');
 wavelengthTL = double(BLUE1_KING_TL.wavelength_nmAir); % same for all LEDs
 spectrumTL_B1 = double(BLUE1_KING_TL.spectrum);
@@ -13,4 +13,13 @@ BLUE1_KING_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\L
 wavelengthAS = BLUE1_KING_AS.wavelenght_AS; % same for all LEDs
 spectrumB1_AS = BLUE1_KING_AS.spectrum_C;
 
-%% 
+%% Load BLUE2 variable and convert to double
+
+% ThorLabs variable
+BLUE2_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\BLUE_LEDs\BLUE2.mat');
+spectrumTL_B1 = double(BLUE1_KING_TL.spectrum);
+
+% AS7262 variable 
+BLUE1_KING_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\BLUE_LEDs\BLUE1_KING.mat');
+
+spectrumB1_AS = BLUE1_KING_AS.spectrum_C;
