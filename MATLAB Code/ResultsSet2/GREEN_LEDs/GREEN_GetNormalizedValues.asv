@@ -1,0 +1,36 @@
+% Normalize spectrum values
+
+, , , , 
+% , , , 
+
+% GREEN1
+spectrum_B1_TL_norm = normalize(spectrum_B1_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_B1_AS_norm = normalize(spectrum_B1_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN2
+spectrum_B2_TL_norm = normalize(spectrum_B2_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_B2_AS_norm = normalize(spectrum_B2_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN3
+spectrum_B3_TL_norm = normalize(spectrum_B3_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_B3_AS_norm = normalize(spectrum_B3_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN4
+spectrum_B4_TL_norm = normalize(spectrum_B4_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_B4_AS_norm = normalize(spectrum_B4_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN5_KING_SGC
+spectrum_B10_TL_norm = normalize(spectrum_B10_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_B10_AS_norm = normalize(spectrum_B10_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN_RG_2THT
+spectrum_BAS7263_TL_norm = normalize(spectrum_BAS7263_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_BAS7263_AS_norm = normalize(spectrum_BAS7263_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN_RG_3THT
+spectrum_BESP32_TL_norm = normalize(spectrum_BESP32_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_BESP32_AS_norm = normalize(spectrum_BESP32_AS,'norm','inf'); % AS7262 values normalized
+
+% GREEN_STRIP
+spectrum_BSTRIP_TL_norm = normalize(spectrum_BSTRIP_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_BSTRIP_AS_norm = normalize(spectrum_BSTRIP_AS,'norm','inf'); % AS7262 values normalized
