@@ -11,3 +11,7 @@ YELLOW_GetNormalizedValues;
 % Fitting
 
 YELLOW_GetFittedValues;
+
+% Get xData and yData from fitted plots
+
+YELLOW_GetDatafromFittedPlots;
