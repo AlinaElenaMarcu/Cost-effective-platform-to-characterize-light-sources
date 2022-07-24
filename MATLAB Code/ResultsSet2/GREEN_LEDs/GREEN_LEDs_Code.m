@@ -8,3 +8,7 @@ GREEN_GetVariablesFromFiles;
 % Normalize
 
 GREEN_GetNormalizedValues;
+
+% Fitting
+
+GREEN_GetFittedValues;
