@@ -41,7 +41,7 @@ legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32",
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE ThorLabs Emission Spectrum ")
+title("BLUE ThorLabs Emission Spectrum")
 
 
 figure(2)
@@ -65,7 +65,7 @@ legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32",
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE AS7262 Emission Spectrum ")
+title("BLUE AS7262 Emission Spectrum")
 
 
 
