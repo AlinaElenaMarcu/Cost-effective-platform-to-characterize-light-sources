@@ -13,6 +13,6 @@ spectrum_W3_TL_norm = normalize(spectrum_W3_TL,'norm','inf'); % ThorLabs values 
 spectrum_W3_AS_norm = normalize(spectrum_W3_AS,'norm','inf'); % AS7262 values normalized
 
 % WHITE_STRIP
-WHITE_STRIP_TL_norm = normalize(WHITE_STRIP_TL,'norm','inf'); % ThorLabs values normalized
-WHITE_STRIP_AS_norm = normalize(WHITE_STRIP_AS,'norm','inf'); % AS7262 values normalized
+spectrum_WSTRIP_TL_norm = normalize(spectrum_WSTRIP_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_WSTRIP_AS_norm = normalize(spectrum_WSTRIP_AS,'norm','inf'); % AS7262 values normalized
 
