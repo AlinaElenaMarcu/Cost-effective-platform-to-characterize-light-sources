@@ -1,0 +1,23 @@
+% Get smoothed xData and yData from fitted plots
+
+% WHITE_AS7263
+spectrum_W1_TL_xData_smooth = smooth(spectrum_W1_TL_xData,'moving');
+spectrum_W1_TL_yData_smooth = smooth(spectrum_W1_TL_yData,'moving');
+
+TL_smooth_xData = get(TL_smooth_plot,'xData');
+TL_smooth_yData = get(TL_smooth_plot,'yData');
+
+% WHITE_LUPA
+spectrum_W2_TL_xData_smooth = smooth(spectrum_W2_TL_xData,'moving');
+spectrum_W2_TL_yData_smooth = smooth(spectrum_W2_TL_yData,'moving');
+
+% WHITE_NEXUS5X_FLASH
+spectrum_W3_TL_xData_smooth = smooth(spectrum_W3_TL_xData,'moving');
+spectrum_W3_TL_yData_smooth = smooth(spectrum_W3_TL_yData,'moving');
+
+% WHITE_STRIP
+spectrum_WSTRIP_TL_xData_smooth = smooth(spectrum_WSTRIP_TL_xData,'moving');
+spectrum_WSTRIP_TL_yData_smooth = smooth(spectrum_WSTRIP_TL_yData,'moving');
+
+
+
