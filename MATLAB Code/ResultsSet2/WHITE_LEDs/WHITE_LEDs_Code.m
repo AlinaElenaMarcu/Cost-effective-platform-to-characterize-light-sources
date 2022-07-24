@@ -16,8 +16,6 @@ WHITE_GetFittedValues;
 
 WHITE_GetDatafromFittedPlot;
 
-% Smooth ThorLabs values
-
 
 % Plot
 
