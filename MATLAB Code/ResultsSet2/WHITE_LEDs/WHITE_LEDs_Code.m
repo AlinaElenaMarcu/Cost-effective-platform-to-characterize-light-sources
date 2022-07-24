@@ -3,3 +3,8 @@
 % Load WHITE LEDs variables -- ThorLabs and AS7262
 
 WHITE_GetVariablesFromFiles;
+
+% Normalize
+
+WHITE_GetNormalizedValues;
+
