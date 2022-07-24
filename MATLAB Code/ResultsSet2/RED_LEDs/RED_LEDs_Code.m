@@ -4,3 +4,7 @@
 % Load RED LEDs variables -- ThorLabs and AS7262
 
 RED_GetVariablesFromFiles;
+
+% Normalize
+
+RED_GetNormalizedValues;
