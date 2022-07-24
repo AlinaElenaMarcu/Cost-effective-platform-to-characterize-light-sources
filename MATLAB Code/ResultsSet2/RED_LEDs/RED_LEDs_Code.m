@@ -26,19 +26,19 @@ plot(spectrum_R2_TL_xData,spectrum_R2_TL_yData,'Color',[0.4940, 0.1840, 0.5560])
 hold on;
 plot(spectrum_R3_TL_xData,spectrum_R3_TL_yData, 'm'); % magenta
 hold on;
-plot(spectrum_R4_TL_xData,spectrum_R4_TL_yData, 'k'); % black
+plot(spectrum_R4_TL_xData,spectrum_R4_TL_yData, 'Color',[0.9290, 0.6940, 0.1250]); % #EDB120 color
 hold on;
-plot(spectrum_R5_TL_xData,spectrum_R5_TL_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
+plot(spectrum_R5_TL_xData,spectrum_R5_TL_yData,'Color',[0.3010, 0.7450, 0.9330]); % #4DBEEE color
 hold on;
 plot(spectrum_R6_TL_xData,spectrum_R6_TL_yData,'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
 plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData, 'r'); % red
 hold on;
-plot(spectrum_RRG2T_TL_xData,spectrum_RRG2T_TL_yData, 'g'); % green
+plot(spectrum_RRG2T_TL_xData,spectrum_RRG2T_TL_yData, 'k'); % black color
 hold on;
-plot(spectrum_RRG3T_TL_xData,spectrum_RRG3T_TL_yData,'Color',[0.8500, 0.3250, 0.0980],'Marker','o'); % #D95319 color
+plot(spectrum_RRG3T_TL_xData,spectrum_RRG3T_TL_yData,'Color',[0.8500, 0.3250, 0.0980]); % #D95319 color
 hold on;
-plot(spectrum_RSTRIP_TL_xData,spectrum_RSTRIP_TL_yData,'Color',[0.3010, 0.7450, 0.9330],'Marker','x'); % #4DBEEE color
+plot(spectrum_RSTRIP_TL_xData,spectrum_RSTRIP_TL_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
 hold on;
 legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northwest');
 %axis([300 700 0 inf])
@@ -55,19 +55,19 @@ plot(spectrum_R2_AS_xData,spectrum_R2_AS_yData,'Color',[0.4940, 0.1840, 0.5560])
 hold on;
 plot(spectrum_R3_AS_xData,spectrum_R3_AS_yData, 'm'); % magenta
 hold on;
-plot(spectrum_R4_AS_xData,spectrum_R4_AS_yData, 'k'); % black
+plot(spectrum_R4_AS_xData,spectrum_R4_AS_yData, 'Color',[0.9290, 0.6940, 0.1250]); % #EDB120 color
 hold on;
-plot(spectrum_R5_AS_xData,spectrum_R5_AS_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
+plot(spectrum_R5_AS_xData,spectrum_R5_AS_yData,'Color',[0.3010, 0.7450, 0.9330]); % #4DBEEE color
 hold on;
 plot(spectrum_R6_AS_xData,spectrum_R6_AS_yData,'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
 plot(spectrum_R8_AS_xData,spectrum_R8_AS_yData, 'r'); % red
 hold on;
-plot(spectrum_RRG2T_AS_xData,spectrum_RRG2T_AS_yData, 'g'); % green
+plot(spectrum_RRG2T_AS_xData,spectrum_RRG2T_AS_yData, 'k'); % black color
 hold on;
-plot(spectrum_RRG3T_AS_xData,spectrum_RRG3T_AS_yData,'Color',[0.8500, 0.3250, 0.0980],'Marker','o'); % #D95319 color
+plot(spectrum_RRG3T_AS_xData,spectrum_RRG3T_AS_yData,'Color',[0.8500, 0.3250, 0.0980]); % #D95319 color
 hold on;
-plot(spectrum_RSTRIP_AS_xData,spectrum_RSTRIP_AS_yData,'Color',[0.3010, 0.7450, 0.9330],'Marker','x'); % #4DBEEE color
+plot(spectrum_RSTRIP_AS_xData,spectrum_RSTRIP_AS_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
 hold on;
 legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northwest');
 axis([450 650 0 1])
