@@ -8,3 +8,6 @@ WHITE_GetVariablesFromFiles;
 
 WHITE_GetNormalizedValues;
 
+% Fitting
+
+WHITE_GetFittedValues;
