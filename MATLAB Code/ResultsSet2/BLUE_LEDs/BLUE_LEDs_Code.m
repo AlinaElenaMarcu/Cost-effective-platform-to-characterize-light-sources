@@ -17,7 +17,6 @@ BLUE_GetFittedValues;
 
 BLUE_GetDatafromFittedPlots;
 
-
 % Plot
 
 figure(1)
