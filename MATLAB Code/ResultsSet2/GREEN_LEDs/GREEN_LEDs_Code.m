@@ -12,3 +12,5 @@ GREEN_GetNormalizedValues;
 % Fitting
 
 GREEN_GetFittedValues;
+
+% Get xData and yData from fitted plots
