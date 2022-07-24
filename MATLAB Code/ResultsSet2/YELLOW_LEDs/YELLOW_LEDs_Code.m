@@ -7,3 +7,7 @@ YELLOW_GetVariablesFromFiles;
 % Normalize
 
 YELLOW_GetNormalizedValues;
+
+% Fitting
+
+YELLOW_GetFittedValues;
