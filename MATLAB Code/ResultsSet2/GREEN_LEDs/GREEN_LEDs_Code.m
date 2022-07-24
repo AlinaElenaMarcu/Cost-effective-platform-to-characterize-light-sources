@@ -41,7 +41,7 @@ legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GR
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("GREEN ThorLabs Emission Spectrum ")
+title("GREEN ThorLabs Emission Spectrum")
 
 
 figure(2)
@@ -65,4 +65,4 @@ legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GR
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("GREEN AS7262 Emission Spectrum ")
+title("GREEN AS7262 Emission Spectrum")
