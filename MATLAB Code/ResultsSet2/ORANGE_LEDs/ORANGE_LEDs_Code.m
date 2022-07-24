@@ -1,0 +1,2 @@
+% Plot all the LEDs in the ORANGE category -- ORANGE1, ORANGE2, ORANGE3, 
+% ORANGE4, ORANGE5, ORANGE6
