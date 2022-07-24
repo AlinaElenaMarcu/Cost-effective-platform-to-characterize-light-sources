@@ -39,7 +39,7 @@ legend("VIOLET",'Location','northwest');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("RED ThorLabs Emission Spectrum")
+title("VIOLET ThorLabs Emission Spectrum")
 
 
 figure(2)
@@ -48,4 +48,4 @@ legend("VIOLET",'Location','northwest');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("RED AS7262 Emission Spectrum")
+title("VIOLET AS7262 Emission Spectrum")
