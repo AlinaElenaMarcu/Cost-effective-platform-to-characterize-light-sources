@@ -1,0 +1,1 @@
+% Normalize spectrum values
