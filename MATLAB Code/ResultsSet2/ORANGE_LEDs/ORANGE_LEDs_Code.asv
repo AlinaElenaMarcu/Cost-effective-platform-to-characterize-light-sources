@@ -32,18 +32,18 @@ plot(spectrum_O5_TL_xData,spectrum_O5_TL_yData,'Color',[0, 0.4470, 0.7410]); % #
 hold on;
 plot(spectrum_O6_TL_xData,spectrum_O6_TL_yData,'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
-legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32","BLUE STRIP");
+legend("ORANGE1","ORANGE2","ORANGE3","ORANGE4","ORANGE5","ORANGE6",'Location','northwest');
 %axis([300 700 0 inf])
 axis([450 650 0 1])
-xlabel("Wavelength [nm]");
-ylabel("Intensity (normalized)");
-title("GREEN ThorLabs Emission Spectrum ")
+xlabel("Wavelength [nm]",'FontSize',12);
+ylabel("Intensity (normalized)",'FontSize',12);
+title("ORANGE ThorLabs Emission Spectrum",'FontSize',12)
 
 
 figure(2)
-plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'r'); % red
+plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
-plot(spectrum_O2_AS_xData,spectrum_O2_AS_yData,'b'); % blue
+plot(spectrum_O2_AS_xData,spectrum_O2_AS_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
 hold on;
 plot(spectrum_O3_AS_xData,spectrum_O3_AS_yData, 'm'); % magenta
 hold on;
@@ -53,12 +53,8 @@ plot(spectrum_O5_AS_xData,spectrum_O5_AS_yData,'Color',[0, 0.4470, 0.7410]); % #
 hold on;
 plot(spectrum_O6_AS_xData,spectrum_O6_AS_yData,'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
-plot(spectrum_GRG3T_AS_xData,spectrum_GRG3T_AS_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
-hold on;
-plot(spectrum_GSTRIP_AS_xData,spectrum_GSTRIP_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
-hold on;
-legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32","BLUE STRIP");
+legend("ORANGE1","ORANGE2","ORANGE3","ORANGE4","ORANGE5","ORANGE6",'Location','northwest');
 axis([450 650 0 1])
-xlabel("Wavelength [nm]");
-ylabel("Intensity (normalized)");
-title("GREEN AS7262 Emission Spectrum ")
+xlabel("Wavelength [nm]",'FontSize',12);
+ylabel("Intensity (normalized)",'FontSize',12);
+title("ORANGE AS7262 Emission Spectrum",'FontSize',12)
