@@ -30,7 +30,7 @@ legend("YELLOW1","YELLOW2","YELLOW STRIP",'Location','northwest');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("ORANGE ThorLabs Emission Spectrum")
+title("YELLOW ThorLabs Emission Spectrum")
 
 
 figure(2)
@@ -44,4 +44,4 @@ legend("YELLOW1","YELLOW2","YELLOW STRIP",'Location','northwest');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("ORANGE AS7262 Emission Spectrum")
+title("YELLOW AS7262 Emission Spectrum")
