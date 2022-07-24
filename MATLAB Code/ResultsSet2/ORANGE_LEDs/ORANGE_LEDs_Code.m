@@ -4,3 +4,7 @@
 % Load ORANGE LEDs variables -- ThorLabs and AS7262
 
 ORANGE_GetVariablesFromFiles;
+
+% Normalize
+
+ORANGE_GetNormalizedValues;
