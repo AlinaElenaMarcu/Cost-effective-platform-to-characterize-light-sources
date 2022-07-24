@@ -3,3 +3,7 @@
 % Load YELLOW LEDs variables -- ThorLabs and AS7262
 
 YELLOW_GetVariablesFromFiles;
+
+% Normalize
+
+YELLOW_GetNormalizedValues;
