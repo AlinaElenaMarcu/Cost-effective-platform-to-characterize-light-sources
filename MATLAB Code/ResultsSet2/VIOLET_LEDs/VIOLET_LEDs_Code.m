@@ -27,6 +27,9 @@ spectrum_V_AS_fit = fit(wavelength_AS, spectrum_V_AS_norm,'pchipinterp'); % fitt
 spectrum_V_TL_xData = get(plot(spectrum_V_TL_fit),'xData')';
 spectrum_V_TL_yData = get(plot(spectrum_V_TL_fit),'yData')';
 
+spectrum_V_AS_xData = get(plot(spectrum_V_AS_fit),'xData')';
+spectrum_V_AS_yData = get(plot(spectrum_V_AS_fit),'yData')';
+
 % Plot
 
 figure(1)
