@@ -36,7 +36,7 @@ plot(spectrum_GRG3T_TL_xData,spectrum_GRG3T_TL_yData,'Color',[0.4940, 0.1840, 0.
 hold on;
 plot(spectrum_GSTRIP_TL_xData,spectrum_GSTRIP_TL_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
-legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32","BLUE STRIP");
+legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP");
 %axis([300 700 0 inf])
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
@@ -61,7 +61,7 @@ plot(spectrum_GRG3T_AS_xData,spectrum_GRG3T_AS_yData,'Color',[0.4940, 0.1840, 0.
 hold on;
 plot(spectrum_GSTRIP_AS_xData,spectrum_GSTRIP_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
-legend("BLUE1 KING","BLUE2","BLUE3","BLUE4","BLUE10","BLUE AS7263","BLUE ESP32","BLUE STRIP");
+legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP");
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
