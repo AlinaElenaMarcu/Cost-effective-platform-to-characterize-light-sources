@@ -4,7 +4,3 @@
 % Load GREEN LEDs variables -- ThorLabs and AS7262
 
 GREEN_GetVariablesFromFiles;
-
-% Normalize
-
-GREEN_GetNormalizedValues;
