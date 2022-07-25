@@ -58,13 +58,14 @@ spectrum_B1_TL_yData = get(spectrum_B1_TL_plot,'yData')';
 spectrum_B1_AS_xData = get(spectrum_B1_AS_plot,'xData')';
 spectrum_B1_AS_yData = get(spectrum_B1_AS_plot,'yData')';
 
-[spectrum_B1_TL_peaks,locs_B1_1]=findpeaks(spectrum_B1_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_B1_AS_peaks,locs_B1_2]=findpeaks(spectrum_B1_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_B1_TL_peaks,locs_B1_1]=findpeaks(spectrum_B1_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_B1_AS_peaks,locs_B1_2]=findpeaks(spectrum_B1_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(3)
 subplot(2,1,1);
 plot(spectrum_B1_TL_xData,spectrum_B1_TL_yData,spectrum_B1_TL_xData(locs_B1_1),spectrum_B1_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE1 ThorLabs Peaks")
@@ -72,6 +73,7 @@ title("BLUE1 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_B1_AS_xData,spectrum_B1_AS_yData,spectrum_B1_AS_xData(locs_B1_2),spectrum_B1_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE1 AS7262 Peaks")
@@ -121,13 +123,14 @@ spectrum_B2_TL_yData = get(spectrum_B2_TL_plot,'yData')';
 spectrum_B2_AS_xData = get(spectrum_B2_AS_plot,'xData')';
 spectrum_B2_AS_yData = get(spectrum_B2_AS_plot,'yData')';
 
-[spectrum_B2_TL_peaks,locs_B2_1]=findpeaks(spectrum_B2_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_B2_AS_peaks,locs_B2_2]=findpeaks(spectrum_B2_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_B2_TL_peaks,locs_B2_1]=findpeaks(spectrum_B2_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_B2_AS_peaks,locs_B2_2]=findpeaks(spectrum_B2_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(6)
 subplot(2,1,1);
 plot(spectrum_B2_TL_xData,spectrum_B2_TL_yData,spectrum_B2_TL_xData(locs_B2_1),spectrum_B2_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE2 ThorLabs Peaks")
@@ -135,6 +138,7 @@ title("BLUE2 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_B2_AS_xData,spectrum_B2_AS_yData,spectrum_B2_AS_xData(locs_B2_2),spectrum_B2_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE2 AS7262 Peaks")
@@ -184,13 +188,14 @@ spectrum_B3_TL_yData = get(spectrum_B3_TL_plot,'yData')';
 spectrum_B3_AS_xData = get(spectrum_B3_AS_plot,'xData')';
 spectrum_B3_AS_yData = get(spectrum_B3_AS_plot,'yData')';
 
-[spectrum_B3_TL_peaks,locs_B3_1]=findpeaks(spectrum_B3_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_B3_AS_peaks,locs_B3_2]=findpeaks(spectrum_B3_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_B3_TL_peaks,locs_B3_1]=findpeaks(spectrum_B3_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_B3_AS_peaks,locs_B3_2]=findpeaks(spectrum_B3_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(9)
 subplot(2,1,1);
 plot(spectrum_B3_TL_xData,spectrum_B3_TL_yData,spectrum_B3_TL_xData(locs_B3_1),spectrum_B3_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE3 ThorLabs Peaks")
@@ -198,6 +203,7 @@ title("BLUE3 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_B3_AS_xData,spectrum_B3_AS_yData,spectrum_B3_AS_xData(locs_B3_2),spectrum_B3_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE3 AS7262 Peaks")
@@ -247,13 +253,14 @@ spectrum_B4_TL_yData = get(spectrum_B4_TL_plot,'yData')';
 spectrum_B4_AS_xData = get(spectrum_B4_AS_plot,'xData')';
 spectrum_B4_AS_yData = get(spectrum_B4_AS_plot,'yData')';
 
-[spectrum_B4_TL_peaks,locs_B4_1]=findpeaks(spectrum_B4_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_B4_AS_peaks,locs_B4_2]=findpeaks(spectrum_B4_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_B4_TL_peaks,locs_B4_1]=findpeaks(spectrum_B4_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_B4_AS_peaks,locs_B4_2]=findpeaks(spectrum_B4_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(12)
 subplot(2,1,1);
 plot(spectrum_B4_TL_xData,spectrum_B4_TL_yData,spectrum_B4_TL_xData(locs_B4_1),spectrum_B4_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE4 ThorLabs Peaks")
@@ -261,6 +268,7 @@ title("BLUE4 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_B4_AS_xData,spectrum_B4_AS_yData,spectrum_B4_AS_xData(locs_B4_2),spectrum_B4_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE4 AS7262 Peaks")
@@ -310,13 +318,14 @@ spectrum_B10_TL_yData = get(spectrum_B10_TL_plot,'yData')';
 spectrum_B10_AS_xData = get(spectrum_B10_AS_plot,'xData')';
 spectrum_B10_AS_yData = get(spectrum_B10_AS_plot,'yData')';
 
-[spectrum_B10_TL_peaks,locs_B10_1]=findpeaks(spectrum_B10_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_B10_AS_peaks,locs_B10_2]=findpeaks(spectrum_B10_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_B10_TL_peaks,locs_B10_1]=findpeaks(spectrum_B10_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_B10_AS_peaks,locs_B10_2]=findpeaks(spectrum_B10_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(15)
 subplot(2,1,1);
 plot(spectrum_B10_TL_xData,spectrum_B10_TL_yData,spectrum_B10_TL_xData(locs_B10_1),spectrum_B10_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE10 ThorLabs Peaks")
@@ -324,6 +333,7 @@ title("BLUE10 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_B10_AS_xData,spectrum_B10_AS_yData,spectrum_B10_AS_xData(locs_B10_2),spectrum_B10_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE10 AS7262 Peaks")
@@ -373,13 +383,14 @@ spectrum_BAS7263_TL_yData = get(spectrum_BAS7263_TL_plot,'yData')';
 spectrum_BAS7263_AS_xData = get(spectrum_BAS7263_AS_plot,'xData')';
 spectrum_BAS7263_AS_yData = get(spectrum_BAS7263_AS_plot,'yData')';
 
-[spectrum_BAS7263_TL_peaks,locs_BAS7263_1]=findpeaks(spectrum_BAS7263_TL_yData,'MinPeakHeight', 0.3);
-[spectrum_BAS7263_AS_peaks,locs_BAS7263_2]=findpeaks(spectrum_BAS7263_AS_yData,'MinPeakHeight', 0.3);
+[spectrum_BAS7263_TL_peaks,locs_BAS7263_1]=findpeaks(spectrum_BAS7263_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_BAS7263_AS_peaks,locs_BAS7263_2]=findpeaks(spectrum_BAS7263_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(18)
 subplot(2,1,1);
 plot(spectrum_BAS7263_TL_xData,spectrum_BAS7263_TL_yData,spectrum_BAS7263_TL_xData(locs_BAS7263_1),spectrum_BAS7263_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7263 ThorLabs Peaks")
@@ -387,6 +398,7 @@ title("BLUE AS7263 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_BAS7263_AS_xData,spectrum_BAS7263_AS_yData,spectrum_BAS7263_AS_xData(locs_BAS7263_2),spectrum_BAS7263_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7263 AS7262 Peaks")
@@ -436,13 +448,14 @@ spectrum_BESP32_TL_yData = get(spectrum_BESP32_TL_plot,'yData')';
 spectrum_BESP32_AS_xData = get(spectrum_BESP32_AS_plot,'xData')';
 spectrum_BESP32_AS_yData = get(spectrum_BESP32_AS_plot,'yData')';
 
-[spectrum_BESP32_TL_peaks,locs_BESP32_1]=findpeaks(spectrum_BESP32_TL_yData,'MinPeakHeight', 0.05);
-[spectrum_BESP32_AS_peaks,locs_BESP32_2]=findpeaks(spectrum_BESP32_AS_yData,'MinPeakHeight', 0.05);
+[spectrum_BESP32_TL_peaks,locs_BESP32_1]=findpeaks(spectrum_BESP32_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_BESP32_AS_peaks,locs_BESP32_2]=findpeaks(spectrum_BESP32_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(21)
 subplot(2,1,1);
 plot(spectrum_BESP32_TL_xData,spectrum_BESP32_TL_yData,spectrum_BESP32_TL_xData(locs_BESP32_1),spectrum_BESP32_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ESP32 ThorLabs Peaks")
@@ -450,6 +463,7 @@ title("BLUE ESP32 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_BESP32_AS_xData,spectrum_BESP32_AS_yData,spectrum_BESP32_AS_xData(locs_BESP32_2),spectrum_BESP32_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ESP32 AS7262 Peaks")
@@ -499,13 +513,14 @@ spectrum_BSTRIP_TL_yData = get(spectrum_BSTRIP_TL_plot,'yData')';
 spectrum_BSTRIP_AS_xData = get(spectrum_BSTRIP_AS_plot,'xData')';
 spectrum_BSTRIP_AS_yData = get(spectrum_BSTRIP_AS_plot,'yData')';
 
-[spectrum_BSTRIP_TL_peaks,locs_BSTRIP_1]=findpeaks(spectrum_BSTRIP_TL_yData,'MinPeakHeight', 0.05);
-[spectrum_BSTRIP_AS_peaks,locs_BSTRIP_2]=findpeaks(spectrum_BSTRIP_AS_yData,'MinPeakHeight', 0.05);
+[spectrum_BSTRIP_TL_peaks,locs_BSTRIP_1]=findpeaks(spectrum_BSTRIP_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_BSTRIP_AS_peaks,locs_BSTRIP_2]=findpeaks(spectrum_BSTRIP_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(24)
 subplot(2,1,1);
 plot(spectrum_BSTRIP_TL_xData,spectrum_BSTRIP_TL_yData,spectrum_BSTRIP_TL_xData(locs_BSTRIP_1),spectrum_BSTRIP_TL_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE STRIP ThorLabs Peaks")
@@ -513,6 +528,7 @@ title("BLUE STRIP ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_BSTRIP_AS_xData,spectrum_BSTRIP_AS_yData,spectrum_BSTRIP_AS_xData(locs_BSTRIP_2),spectrum_BSTRIP_AS_peaks,'or')
 axis([450 650 0 1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE STRIP AS7262 Peaks")
