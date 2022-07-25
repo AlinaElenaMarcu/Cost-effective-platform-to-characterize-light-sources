@@ -44,7 +44,7 @@ hold on;
 spectrum_O1_AS_plot = plot(spectrum_O1_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE1 Emission Spectrum");
@@ -65,7 +65,7 @@ spectrum_O1_AS_yData = get(spectrum_O1_AS_plot,'yData')';
 figure(3)
 subplot(2,1,1);
 plot(spectrum_O1_TL_xData,spectrum_O1_TL_yData,spectrum_O1_TL_xData(locs_O1_1),spectrum_O1_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -73,7 +73,7 @@ title("ORANGE1 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,spectrum_O1_AS_xData(locs_O1_2),spectrum_O1_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -110,7 +110,7 @@ hold on;
 spectrum_O2_AS_plot = plot(spectrum_O2_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE2 Emission Spectrum");
@@ -130,7 +130,7 @@ spectrum_O2_AS_yData = get(spectrum_O2_AS_plot,'yData')';
 figure(6)
 subplot(2,1,1);
 plot(spectrum_O2_TL_xData,spectrum_O2_TL_yData,spectrum_O2_TL_xData(locs_O2_1),spectrum_O2_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -138,7 +138,7 @@ title("ORANGE2 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O2_AS_xData,spectrum_O2_AS_yData,spectrum_O2_AS_xData(locs_O2_2),spectrum_O2_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -175,7 +175,7 @@ hold on;
 spectrum_O3_AS_plot = plot(spectrum_O3_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE3 Emission Spectrum");
@@ -195,7 +195,7 @@ spectrum_O3_AS_yData = get(spectrum_O3_AS_plot,'yData')';
 figure(9)
 subplot(2,1,1);
 plot(spectrum_O3_TL_xData,spectrum_O3_TL_yData,spectrum_O3_TL_xData(locs_O3_1),spectrum_O3_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -203,7 +203,7 @@ title("ORANGE3 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O3_AS_xData,spectrum_O3_AS_yData,spectrum_O3_AS_xData(locs_O3_2),spectrum_O3_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -240,7 +240,7 @@ hold on;
 spectrum_O4_AS_plot = plot(spectrum_O4_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE4 Emission Spectrum");
@@ -260,7 +260,7 @@ spectrum_O4_AS_yData = get(spectrum_O4_AS_plot,'yData')';
 figure(12)
 subplot(2,1,1);
 plot(spectrum_O4_TL_xData,spectrum_O4_TL_yData,spectrum_O4_TL_xData(locs_O4_1),spectrum_O4_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -268,7 +268,7 @@ title("ORANGE4 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O4_AS_xData,spectrum_O4_AS_yData,spectrum_O4_AS_xData(locs_O4_2),spectrum_O4_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -305,7 +305,7 @@ hold on;
 spectrum_O5_AS_plot = plot(spectrum_O5_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE5 Emission Spectrum");
@@ -325,7 +325,7 @@ spectrum_O5_AS_yData = get(spectrum_O5_AS_plot,'yData')';
 figure(15)
 subplot(2,1,1);
 plot(spectrum_O5_TL_xData,spectrum_O5_TL_yData,spectrum_O5_TL_xData(locs_O5_1),spectrum_O5_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -333,7 +333,7 @@ title("ORANGE5 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O5_AS_xData,spectrum_O5_AS_yData,spectrum_O5_AS_xData(locs_O5_2),spectrum_O5_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -370,7 +370,7 @@ hold on;
 spectrum_O6_AS_plot = plot(spectrum_O6_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE6 Emission Spectrum");
@@ -390,7 +390,7 @@ spectrum_O6_AS_yData = get(spectrum_O6_AS_plot,'yData')';
 figure(18)
 subplot(2,1,1);
 plot(spectrum_O6_TL_xData,spectrum_O6_TL_yData,spectrum_O6_TL_xData(locs_O6_1),spectrum_O6_TL_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -398,7 +398,7 @@ title("ORANGE6 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_O6_AS_xData,spectrum_O6_AS_yData,spectrum_O6_AS_xData(locs_O6_2),spectrum_O6_AS_peaks,'or')
-axis([450 650 0 1])
+axis([450 650 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
