@@ -277,13 +277,263 @@ title("RED4 AS7262 Peaks")
 
 %% RED5
 
+% Plot fitted spectrum with data
+
+figure(13)
+subplot(2,1,1);
+plot(spectrum_R5_TL_fit,wavelength_TL, spectrum_R5_TL_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED5 ThorLabs Fitted Emission Spectrum")
+
+subplot(2,1,2);
+plot(spectrum_R5_AS_fit,wavelength_AS, spectrum_R5_AS_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED5 AS7262 Fitted Emission Spectrum")
+% saveas(gcf,'RED5_Fitted_Spectrum.png')
+
+% Plot the emission spectrum ThorLabs vs AS7262
+
+figure(14)
+spectrum_R5_TL_plot = plot(spectrum_R5_TL_fit,'b');
+hold on;
+spectrum_R5_AS_plot = plot(spectrum_R5_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262",'Location','northwest');
+axis([450 700 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED5 Emission Spectrum");
+% saveas(gcf,'RED5_Emission_Spectrum.png')
+
+% Peak detect
+
+spectrum_R5_TL_xData = get(spectrum_R5_TL_plot,'xData')';
+spectrum_R5_TL_yData = get(spectrum_R5_TL_plot,'yData')';
+
+spectrum_R5_AS_xData = get(spectrum_R5_AS_plot,'xData')';
+spectrum_R5_AS_yData = get(spectrum_R5_AS_plot,'yData')';
+
+[spectrum_R5_TL_peaks,locs_R5_1]=findpeaks(spectrum_R5_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_R5_AS_peaks,locs_R5_2]=findpeaks(spectrum_R5_AS_yData,"NPeaks",1,"SortStr","descend");
+
+figure(15)
+subplot(2,1,1);
+plot(spectrum_R5_TL_xData,spectrum_R5_TL_yData,spectrum_R5_TL_xData(locs_R5_1),spectrum_R5_TL_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED5 ThorLabs Peaks")
+
+subplot(2,1,2);
+plot(spectrum_R5_AS_xData,spectrum_R5_AS_yData,spectrum_R5_AS_xData(locs_R5_2),spectrum_R5_AS_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED5 AS7262 Peaks")
+% saveas(gcf,'RED5_Peaks.png')
+
 %% RED6
+
+% Plot fitted spectrum with data
+
+figure(16)
+subplot(2,1,1);
+plot(spectrum_R6_TL_fit,wavelength_TL, spectrum_R6_TL_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED6 ThorLabs Fitted Emission Spectrum")
+
+subplot(2,1,2);
+plot(spectrum_R6_AS_fit,wavelength_AS, spectrum_R6_AS_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED6 AS7262 Fitted Emission Spectrum")
+% saveas(gcf,'RED6_Fitted_Spectrum.png')
+
+% Plot the emission spectrum ThorLabs vs AS7262
+
+figure(17)
+spectrum_R6_TL_plot = plot(spectrum_R6_TL_fit,'b');
+hold on;
+spectrum_R6_AS_plot = plot(spectrum_R6_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262",'Location','northwest');
+axis([450 700 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED6 Emission Spectrum");
+% saveas(gcf,'RED6_Emission_Spectrum.png')
+
+% Peak detect
+
+spectrum_R6_TL_xData = get(spectrum_R6_TL_plot,'xData')';
+spectrum_R6_TL_yData = get(spectrum_R6_TL_plot,'yData')';
+
+spectrum_R6_AS_xData = get(spectrum_R6_AS_plot,'xData')';
+spectrum_R6_AS_yData = get(spectrum_R6_AS_plot,'yData')';
+
+[spectrum_R6_TL_peaks,locs_R6_1]=findpeaks(spectrum_R6_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_R6_AS_peaks,locs_R6_2]=findpeaks(spectrum_R6_AS_yData,"NPeaks",1,"SortStr","descend");
+
+figure(18)
+subplot(2,1,1);
+plot(spectrum_R6_TL_xData,spectrum_R6_TL_yData,spectrum_R6_TL_xData(locs_R6_1),spectrum_R6_TL_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED6 ThorLabs Peaks")
+
+subplot(2,1,2);
+plot(spectrum_R6_AS_xData,spectrum_R6_AS_yData,spectrum_R6_AS_xData(locs_R6_2),spectrum_R6_AS_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED6 AS7262 Peaks")
+% saveas(gcf,'RED6_Peaks.png')
 
 %% RED8_KING_SRCE
 
+% Plot fitted spectrum with data
+
+figure(19)
+subplot(2,1,1);
+plot(spectrum_R8_TL_fit,wavelength_TL, spectrum_R8_TL_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED8 KING SRCE ThorLabs Fitted Emission Spectrum")
+
+subplot(2,1,2);
+plot(spectrum_R8_AS_fit,wavelength_AS, spectrum_R8_AS_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED8 KING SRCE AS7262 Fitted Emission Spectrum")
+saveas(gcf,'RED8_KING_SRCE_Fitted_Spectrum.png')
+
+% Plot the emission spectrum ThorLabs vs AS7262
+
+figure(20)
+spectrum_R8_TL_plot = plot(spectrum_R8_TL_fit,'b');
+hold on;
+spectrum_R8_AS_plot = plot(spectrum_R8_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262",'Location','northwest');
+axis([450 700 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED8 KING SRCE Emission Spectrum");
+saveas(gcf,'RED8_KING_SRCE_Emission_Spectrum.png')
+
+% Peak detect
+
+spectrum_R8_TL_xData = get(spectrum_R8_TL_plot,'xData')';
+spectrum_R8_TL_yData = get(spectrum_R8_TL_plot,'yData')';
+
+spectrum_R8_AS_xData = get(spectrum_R8_AS_plot,'xData')';
+spectrum_R8_AS_yData = get(spectrum_R8_AS_plot,'yData')';
+
+[spectrum_R8_TL_peaks,locs_R8_1]=findpeaks(spectrum_R8_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_R8_AS_peaks,locs_R8_2]=findpeaks(spectrum_R8_AS_yData,"NPeaks",1,"SortStr","descend");
+
+figure(21)
+subplot(2,1,1);
+plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData,spectrum_R8_TL_xData(locs_R8_1),spectrum_R8_TL_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED8 KING SRCE ThorLabs Peaks")
+
+subplot(2,1,2);
+plot(spectrum_R8_AS_xData,spectrum_R8_AS_yData,spectrum_R8_AS_xData(locs_R8_2),spectrum_R8_AS_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED8 KING SRCE AS7262 Peaks")
+saveas(gcf,'RED8_KING_SRCE_Peaks.png')
 
 %% RED_RG_2THT_RED7
 
+% Plot fitted spectrum with data
+
+figure(22)
+subplot(2,1,1);
+plot(spectrum_RRG2T_TL_fit,wavelength_TL, spectrum_RRG2T_TL_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED RG 2THT ThorLabs Fitted Emission Spectrum")
+
+subplot(2,1,2);
+plot(spectrum_RRG2T_AS_fit,wavelength_AS, spectrum_RRG2T_AS_norm);
+axis([450 700 0 inf])
+legend("Data","Fitted curve",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED RG 2THT AS7262 Fitted Emission Spectrum")
+% saveas(gcf,'RED_RG_2THT_Fitted_Spectrum.png')
+
+% Plot the emission spectrum ThorLabs vs AS7262
+
+figure(23)
+spectrum_RRG2T_TL_plot = plot(spectrum_RRG2T_TL_fit,'b');
+hold on;
+spectrum_RRG2T_AS_plot = plot(spectrum_RRG2T_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262",'Location','northwest');
+axis([450 700 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED RG 2THT Emission Spectrum");
+% saveas(gcf,'RED_RG_2THT_Emission_Spectrum.png')
+
+% Peak detect
+
+spectrum_RRG2T_TL_xData = get(spectrum_RRG2T_TL_plot,'xData')';
+spectrum_RRG2T_TL_yData = get(spectrum_RRG2T_TL_plot,'yData')';
+
+spectrum_RRG2T_AS_xData = get(spectrum_RRG2T_AS_plot,'xData')';
+spectrum_RRG2T_AS_yData = get(spectrum_RRG2T_AS_plot,'yData')';
+
+[spectrum_RRG2T_TL_peaks,locs_RRG2T_1]=findpeaks(spectrum_RRG2T_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_RRG2T_AS_peaks,locs_RRG2T_2]=findpeaks(spectrum_RRG2T_AS_yData,"NPeaks",1,"SortStr","descend");
+
+figure(24)
+subplot(2,1,1);
+plot(spectrum_RRG2T_TL_xData,spectrum_RRG2T_TL_yData,spectrum_RRG2T_TL_xData(locs_RRG2T_1),spectrum_RRG2T_TL_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED RG 2THT ThorLabs Peaks")
+
+subplot(2,1,2);
+plot(spectrum_RRG2T_AS_xData,spectrum_RRG2T_AS_yData,spectrum_RRG2T_AS_xData(locs_RRG2T_2),spectrum_RRG2T_AS_peaks,'or')
+axis([450 700 0 1])
+legend("Emission Spectrum","Peak",'Location','northwest');
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED RG 2THT AS7262 Peaks")
+% saveas(gcf,'RED_RG_2THT_Peaks.png')
 
 %% RED_RG_3THT
 
