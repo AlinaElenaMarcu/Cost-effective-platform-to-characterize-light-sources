@@ -34,6 +34,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE1 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUE1_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -47,6 +48,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE1 Emission Spectrum");
+saveas(gcf,'BLUE1_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -73,6 +75,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE1 AS7262 Peaks")
+saveas(gcf,'BLUE1_Peaks.png')
 
 %% BLUE2
 
@@ -94,6 +97,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE2 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUE2_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -107,6 +111,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE2 Emission Spectrum");
+saveas(gcf,'BLUE2_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -133,6 +138,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE2 AS7262 Peaks")
+saveas(gcf,'BLUE2_Peaks.png')
 
 %% BLUE3
 
@@ -154,6 +160,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE3 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUE3_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -167,6 +174,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE3 Emission Spectrum");
+saveas(gcf,'BLUE3_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -193,6 +201,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE3 AS7262 Peaks")
+saveas(gcf,'BLUE3_Peaks.png')
 
 %% BLUE4
 
@@ -214,6 +223,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE4 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUE4_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -227,6 +237,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE4 Emission Spectrum");
+saveas(gcf,'BLUE4_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -253,6 +264,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE4 AS7262 Peaks")
+saveas(gcf,'BLUE4_Peaks.png')
 
 %% BLUE10
 
@@ -274,6 +286,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE10 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUE10_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -287,6 +300,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE10 Emission Spectrum");
+saveas(gcf,'BLUE10_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -313,6 +327,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE10 AS7262 Peaks")
+saveas(gcf,'BLUE10_Peaks.png')
 
 %% BLUE_AS7263
 
@@ -334,6 +349,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7263 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUEAS7263_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -347,6 +363,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7263 Emission Spectrum");
+saveas(gcf,'BLUEAS7263_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -373,6 +390,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7263 AS7262 Peaks")
+saveas(gcf,'BLUEAS7263_Peaks.png')
 
 %% BLUE_ESP32
 
@@ -394,6 +412,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ESP32 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUEESP32_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -407,6 +426,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ESP32 Emission Spectrum");
+saveas(gcf,'BLUEESP32_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -433,6 +453,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ESP32 AS7262 Peaks")
+saveas(gcf,'BLUEESP32_Peaks.png')
 
 %% BLUE_STRIP
 
@@ -454,6 +475,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE STRIP AS7262 Fitted Emission Spectrum")
+saveas(gcf,'BLUESTRIP_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -467,6 +489,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE STRIP Emission Spectrum");
+saveas(gcf,'BLUESTRIP_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -493,3 +516,4 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE STRIP AS7262 Peaks")
+saveas(gcf,'BLUESTRIP_Peaks.png')
