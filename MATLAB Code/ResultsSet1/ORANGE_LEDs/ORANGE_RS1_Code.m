@@ -58,8 +58,8 @@ spectrum_O1_TL_yData = get(spectrum_O1_TL_plot,'yData')';
 spectrum_O1_AS_xData = get(spectrum_O1_AS_plot,'xData')';
 spectrum_O1_AS_yData = get(spectrum_O1_AS_plot,'yData')';
 
-[spectrum_O1_TL_peaks,locs_O1_1]=findpeaks(spectrum_O1_TL_yData);
-[spectrum_O1_AS_peaks,locs_O1_2]=findpeaks(spectrum_O1_AS_yData);
+[spectrum_O1_TL_peaks,locs_O1_1]=findpeaks(spectrum_O1_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_O1_AS_peaks,locs_O1_2]=findpeaks(spectrum_O1_AS_yData,"NPeaks",1,"SortStr","descend");
 
 
 figure(3)
@@ -86,7 +86,7 @@ saveas(gcf,'ORANGE1_Peaks.png')
 
 figure(4)
 subplot(2,1,1);
-plot(spectrum_O1_TL_fit,wavelength_TL, spectrum_O1_TL_norm);
+plot(spectrum_O2_TL_fit,wavelength_TL, spectrum_O2_TL_norm);
 axis([450 650 0 inf])
 legend("Data","Fitted curve",'Location','northwest');
 xlabel("Wavelength [nm]");
@@ -94,7 +94,7 @@ ylabel("Intensity (normalized)");
 title("ORANGE2 ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
-plot(spectrum_O1_AS_fit,wavelength_AS, spectrum_O1_AS_norm);
+plot(spectrum_O2_AS_fit,wavelength_AS, spectrum_O2_AS_norm);
 axis([450 650 0 inf])
 legend("Data","Fitted curve",'Location','northwest');
 xlabel("Wavelength [nm]");
@@ -105,9 +105,9 @@ saveas(gcf,'ORANGE2_Fitted_Spectrum.png')
 % Plot the emission spectrum ThorLabs vs AS7262
 
 figure(5)
-spectrum_O1_TL_plot = plot(spectrum_O1_TL_fit,'b');
+spectrum_O2_TL_plot = plot(spectrum_O2_TL_fit,'b');
 hold on;
-spectrum_O1_AS_plot = plot(spectrum_O1_AS_fit,'r');
+spectrum_O2_AS_plot = plot(spectrum_O2_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northwest');
 axis([450 650 0 1])
@@ -118,18 +118,18 @@ saveas(gcf,'ORANGE2_Emission_Spectrum.png')
 
 % Peak detect
 
-spectrum_O1_TL_xData = get(spectrum_O1_TL_plot,'xData')';
-spectrum_O1_TL_yData = get(spectrum_O1_TL_plot,'yData')';
+spectrum_O2_TL_xData = get(spectrum_O2_TL_plot,'xData')';
+spectrum_O2_TL_yData = get(spectrum_O2_TL_plot,'yData')';
 
-spectrum_O1_AS_xData = get(spectrum_O1_AS_plot,'xData')';
-spectrum_O1_AS_yData = get(spectrum_O1_AS_plot,'yData')';
+spectrum_O2_AS_xData = get(spectrum_O2_AS_plot,'xData')';
+spectrum_O2_AS_yData = get(spectrum_O2_AS_plot,'yData')';
 
-[spectrum_O1_TL_peaks,locs_O2_1]=findpeaks(spectrum_O1_TL_yData);
-[spectrum_O1_AS_peaks,locs_O2_2]=findpeaks(spectrum_O1_AS_yData);
+[spectrum_O2_TL_peaks,locs_O2_1]=findpeaks(spectrum_O2_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_O2_AS_peaks,locs_O2_2]=findpeaks(spectrum_O2_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(6)
 subplot(2,1,1);
-plot(spectrum_O1_TL_xData,spectrum_O1_TL_yData,spectrum_O1_TL_xData(locs_O2_1),spectrum_O1_TL_peaks,'or')
+plot(spectrum_O2_TL_xData,spectrum_O2_TL_yData,spectrum_O2_TL_xData(locs_O2_1),spectrum_O2_TL_peaks,'or')
 axis([450 650 0 1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
@@ -137,7 +137,7 @@ ylabel("Intensity (normalized)");
 title("ORANGE2 ThorLabs Peaks")
 
 subplot(2,1,2);
-plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,spectrum_O1_AS_xData(locs_O2_2),spectrum_O1_AS_peaks,'or')
+plot(spectrum_O2_AS_xData,spectrum_O2_AS_yData,spectrum_O2_AS_xData(locs_O2_2),spectrum_O2_AS_peaks,'or')
 axis([450 650 0 1])
 legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
@@ -189,8 +189,8 @@ spectrum_O3_TL_yData = get(spectrum_O3_TL_plot,'yData')';
 spectrum_O3_AS_xData = get(spectrum_O3_AS_plot,'xData')';
 spectrum_O3_AS_yData = get(spectrum_O3_AS_plot,'yData')';
 
-[spectrum_O3_TL_peaks,locs_O3_1]=findpeaks(spectrum_O3_TL_yData);
-[spectrum_O3_AS_peaks,locs_O3_2]=findpeaks(spectrum_O3_AS_yData);
+[spectrum_O3_TL_peaks,locs_O3_1]=findpeaks(spectrum_O3_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_O3_AS_peaks,locs_O3_2]=findpeaks(spectrum_O3_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(9)
 subplot(2,1,1);
@@ -254,8 +254,8 @@ spectrum_O4_TL_yData = get(spectrum_O4_TL_plot,'yData')';
 spectrum_O4_AS_xData = get(spectrum_O4_AS_plot,'xData')';
 spectrum_O4_AS_yData = get(spectrum_O4_AS_plot,'yData')';
 
-[spectrum_O4_TL_peaks,locs_O4_1]=findpeaks(spectrum_O4_TL_yData);
-[spectrum_O4_AS_peaks,locs_O4_2]=findpeaks(spectrum_O4_AS_yData);
+[spectrum_O4_TL_peaks,locs_O4_1]=findpeaks(spectrum_O4_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_O4_AS_peaks,locs_O4_2]=findpeaks(spectrum_O4_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(12)
 subplot(2,1,1);
@@ -319,8 +319,8 @@ spectrum_O5_TL_yData = get(spectrum_O5_TL_plot,'yData')';
 spectrum_O5_AS_xData = get(spectrum_O5_AS_plot,'xData')';
 spectrum_O5_AS_yData = get(spectrum_O5_AS_plot,'yData')';
 
-[spectrum_O5_TL_peaks,locs_O5_1]=findpeaks(spectrum_O5_TL_yData);
-[spectrum_O5_AS_peaks,locs_O5_2]=findpeaks(spectrum_O5_AS_yData);
+[spectrum_O5_TL_peaks,locs_O5_1]=findpeaks(spectrum_O5_TL_yData,"NPeaks",1,"SortStr","descend");
+[spectrum_O5_AS_peaks,locs_O5_2]=findpeaks(spectrum_O5_AS_yData,"NPeaks",1,"SortStr","descend");
 
 figure(15)
 subplot(2,1,1);
