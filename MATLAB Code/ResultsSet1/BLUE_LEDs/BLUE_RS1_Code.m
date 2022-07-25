@@ -78,7 +78,7 @@ title("BLUE1 AS7262 Peaks")
 
 % Plot fitted spectrum with data
 
-figure(1)
+figure(4)
 subplot(2,1,1);
 plot(spectrum_B2_TL_fit,wavelength_TL, spectrum_B2_TL_norm);
 axis([450 650 0 inf])
@@ -97,7 +97,7 @@ title("BLUE2 AS7262 Fitted Emission Spectrum")
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
-figure(2)
+figure(5)
 spectrum_B2_TL_plot = plot(spectrum_B2_TL_fit,'b');
 hold on;
 spectrum_B2_AS_plot = plot(spectrum_B2_AS_fit,'r');
@@ -119,7 +119,7 @@ spectrum_B2_AS_yData = get(spectrum_B2_AS_plot,'yData')';
 [spectrum_B2_TL_peaks,locs_B2_1]=findpeaks(spectrum_B2_TL_yData,'MinPeakHeight', 0.3);
 [spectrum_B2_AS_peaks,locs_B2_2]=findpeaks(spectrum_B2_AS_yData,'MinPeakHeight', 0.3);
 
-figure(3)
+figure(6)
 subplot(2,1,1);
 plot(spectrum_B2_TL_xData,spectrum_B2_TL_yData,spectrum_B2_TL_xData(locs_B2_1),spectrum_B2_TL_peaks,'or')
 axis([450 650 0 1])
@@ -138,7 +138,7 @@ title("BLUE2 AS7262 Peaks")
 
 % Plot fitted spectrum with data
 
-figure(1)
+figure(7)
 subplot(2,1,1);
 plot(spectrum_B3_TL_fit,wavelength_TL, spectrum_B3_TL_norm);
 axis([450 650 0 inf])
@@ -157,7 +157,7 @@ title("BLUE3 AS7262 Fitted Emission Spectrum")
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
-figure(2)
+figure(8)
 spectrum_B3_TL_plot = plot(spectrum_B3_TL_fit,'b');
 hold on;
 spectrum_B3_AS_plot = plot(spectrum_B3_AS_fit,'r');
@@ -179,7 +179,7 @@ spectrum_B3_AS_yData = get(spectrum_B3_AS_plot,'yData')';
 [spectrum_B3_TL_peaks,locs_B3_1]=findpeaks(spectrum_B3_TL_yData,'MinPeakHeight', 0.3);
 [spectrum_B3_AS_peaks,locs_B3_2]=findpeaks(spectrum_B3_AS_yData,'MinPeakHeight', 0.3);
 
-figure(3)
+figure(9)
 subplot(2,1,1);
 plot(spectrum_B3_TL_xData,spectrum_B3_TL_yData,spectrum_B3_TL_xData(locs_B3_1),spectrum_B3_TL_peaks,'or')
 axis([450 650 0 1])
@@ -198,7 +198,7 @@ title("BLUE3 AS7262 Peaks")
 
 % Plot fitted spectrum with data
 
-figure(1)
+figure(10)
 subplot(2,1,1);
 plot(spectrum_B4_TL_fit,wavelength_TL, spectrum_B4_TL_norm);
 axis([450 650 0 inf])
@@ -217,7 +217,7 @@ title("BLUE4 AS7262 Fitted Emission Spectrum")
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
-figure(2)
+figure(11)
 spectrum_B4_TL_plot = plot(spectrum_B4_TL_fit,'b');
 hold on;
 spectrum_B4_AS_plot = plot(spectrum_B4_AS_fit,'r');
@@ -239,7 +239,7 @@ spectrum_B4_AS_yData = get(spectrum_B4_AS_plot,'yData')';
 [spectrum_B4_TL_peaks,locs_B4_1]=findpeaks(spectrum_B4_TL_yData,'MinPeakHeight', 0.3);
 [spectrum_B4_AS_peaks,locs_B4_2]=findpeaks(spectrum_B4_AS_yData,'MinPeakHeight', 0.3);
 
-figure(3)
+figure(12)
 subplot(2,1,1);
 plot(spectrum_B4_TL_xData,spectrum_B4_TL_yData,spectrum_B4_TL_xData(locs_B4_1),spectrum_B4_TL_peaks,'or')
 axis([450 650 0 1])
@@ -258,7 +258,7 @@ title("BLUE4 AS7262 Peaks")
 
 % Plot fitted spectrum with data
 
-figure(1)
+figure(13)
 subplot(2,1,1);
 plot(spectrum_B10_TL_fit,wavelength_TL, spectrum_B10_TL_norm);
 axis([450 650 0 inf])
@@ -277,7 +277,7 @@ title("BLUE10 AS7262 Fitted Emission Spectrum")
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
-figure(2)
+figure(14)
 spectrum_B10_TL_plot = plot(spectrum_B10_TL_fit,'b');
 hold on;
 spectrum_B10_AS_plot = plot(spectrum_B10_AS_fit,'r');
@@ -299,7 +299,7 @@ spectrum_B10_AS_yData = get(spectrum_B10_AS_plot,'yData')';
 [spectrum_B10_TL_peaks,locs_B10_1]=findpeaks(spectrum_B10_TL_yData,'MinPeakHeight', 0.3);
 [spectrum_B10_AS_peaks,locs_B10_2]=findpeaks(spectrum_B10_AS_yData,'MinPeakHeight', 0.3);
 
-figure(3)
+figure(15)
 subplot(2,1,1);
 plot(spectrum_B10_TL_xData,spectrum_B10_TL_yData,spectrum_B10_TL_xData(locs_B10_1),spectrum_B10_TL_peaks,'or')
 axis([450 650 0 1])
@@ -318,7 +318,7 @@ title("BLUE10 AS7262 Peaks")
 
 % Plot fitted spectrum with data
 
-figure(1)
+figure(16)
 subplot(2,1,1);
 plot(spectrum_BAS7263_TL_fit,wavelength_TL, spectrum_BAS7263_TL_norm);
 axis([450 650 0 inf])
@@ -337,7 +337,7 @@ title("BLUE AS7263 AS7262 Fitted Emission Spectrum")
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
-figure(2)
+figure(17)
 spectrum_BAS7263_TL_plot = plot(spectrum_BAS7263_TL_fit,'b');
 hold on;
 spectrum_BAS7263_AS_plot = plot(spectrum_BAS7263_AS_fit,'r');
@@ -359,7 +359,7 @@ spectrum_BAS7263_AS_yData = get(spectrum_BAS7263_AS_plot,'yData')';
 [spectrum_BAS7263_TL_peaks,locs_BAS7263_1]=findpeaks(spectrum_BAS7263_TL_yData,'MinPeakHeight', 0.3);
 [spectrum_BAS7263_AS_peaks,locs_BAS7263_2]=findpeaks(spectrum_BAS7263_AS_yData,'MinPeakHeight', 0.3);
 
-figure(3)
+figure(18)
 subplot(2,1,1);
 plot(spectrum_BAS7263_TL_xData,spectrum_BAS7263_TL_yData,spectrum_BAS7263_TL_xData(locs_BAS7263_1),spectrum_BAS7263_TL_peaks,'or')
 axis([450 650 0 1])
@@ -376,6 +376,63 @@ title("BLUE AS7263 AS7262 Peaks")
 
 %% BLUE_ESP32
 
+% Plot fitted spectrum with data
+
+figure(19)
+subplot(2,1,1);
+plot(spectrum_BESP32_TL_fit,wavelength_TL, spectrum_BESP32_TL_norm);
+axis([450 650 0 inf])
+legend("Data","Fitted curve");
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("BLUE ESP32 ThorLabs Fitted Emission Spectrum")
+
+subplot(2,1,2);
+plot(spectrum_BESP32_AS_fit,wavelength_AS, spectrum_BESP32_AS_norm);
+axis([450 650 0 inf])
+legend("Data","Fitted curve");
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("BLUE ESP32 AS7262 Fitted Emission Spectrum")
+
+% Plot the emission spectrum ThorLabs vs AS7262
+
+figure(20)
+spectrum_BESP32_TL_plot = plot(spectrum_BESP32_TL_fit,'b');
+hold on;
+spectrum_BESP32_AS_plot = plot(spectrum_BESP32_AS_fit,'r');
+hold on;
+legend("ThorLabs", "AS7262");
+axis([450 650 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("BLUE ESP32 Emission Spectrum");
+
+% Peak detect
+
+spectrum_BESP32_TL_xData = get(spectrum_BESP32_TL_plot,'xData')';
+spectrum_BESP32_TL_yData = get(spectrum_BESP32_TL_plot,'yData')';
+
+spectrum_BESP32_AS_xData = get(spectrum_BESP32_AS_plot,'xData')';
+spectrum_BESP32_AS_yData = get(spectrum_BESP32_AS_plot,'yData')';
+
+[spectrum_BESP32_TL_peaks,locs_BESP32_1]=findpeaks(spectrum_BESP32_TL_yData,'MinPeakHeight', 0.05);
+[spectrum_BESP32_AS_peaks,locs_BESP32_2]=findpeaks(spectrum_BESP32_AS_yData,'MinPeakHeight', 0.05);
+
+figure(21)
+subplot(2,1,1);
+plot(spectrum_BESP32_TL_xData,spectrum_BESP32_TL_yData,spectrum_BESP32_TL_xData(locs_BESP32_1),spectrum_BESP32_TL_peaks,'or')
+axis([450 650 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("BLUE ESP32 ThorLabs Peaks")
+
+subplot(2,1,2);
+plot(spectrum_BESP32_AS_xData,spectrum_BESP32_AS_yData,spectrum_BESP32_AS_xData(locs_BESP32_2),spectrum_BESP32_AS_peaks,'or')
+axis([450 650 0 1])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("BLUE ESP32 AS7262 Peaks")
 
 %% BLUE_STRIP
 
