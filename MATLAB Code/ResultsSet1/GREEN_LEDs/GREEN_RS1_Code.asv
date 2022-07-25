@@ -65,7 +65,7 @@ figure(3)
 subplot(2,1,1);
 plot(spectrum_G1_TL_xData,spectrum_G1_TL_yData,spectrum_G1_TL_xData(locs_G1_1),spectrum_G1_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN1 ThorLabs Peaks")
@@ -73,7 +73,7 @@ title("GREEN1 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_G1_AS_xData,spectrum_G1_AS_yData,spectrum_G1_AS_xData(locs_G1_2),spectrum_G1_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN1 AS7262 Peaks")
@@ -130,7 +130,7 @@ figure(6)
 subplot(2,1,1);
 plot(spectrum_G2_TL_xData,spectrum_G2_TL_yData,spectrum_G2_TL_xData(locs_G2_1),spectrum_G2_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN2 ThorLabs Peaks")
@@ -138,7 +138,7 @@ title("GREEN2 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_G2_AS_xData,spectrum_G2_AS_yData,spectrum_G2_AS_xData(locs_G2_2),spectrum_G2_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN2 AS7262 Peaks")
@@ -195,7 +195,7 @@ figure(9)
 subplot(2,1,1);
 plot(spectrum_G3_TL_xData,spectrum_G3_TL_yData,spectrum_G3_TL_xData(locs_G3_1),spectrum_G3_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN3 ThorLabs Peaks")
@@ -203,7 +203,7 @@ title("GREEN3 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_G3_AS_xData,spectrum_G3_AS_yData,spectrum_G3_AS_xData(locs_G3_2),spectrum_G3_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN3 AS7262 Peaks")
@@ -260,7 +260,7 @@ figure(12)
 subplot(2,1,1);
 plot(spectrum_G4_TL_xData,spectrum_G4_TL_yData,spectrum_G4_TL_xData(locs_G4_1),spectrum_G4_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN4 ThorLabs Peaks")
@@ -268,7 +268,7 @@ title("GREEN4 ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_G4_AS_xData,spectrum_G4_AS_yData,spectrum_G4_AS_xData(locs_G4_2),spectrum_G4_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN4 AS7262 Peaks")
@@ -325,7 +325,7 @@ figure(15)
 subplot(2,1,1);
 plot(spectrum_G5_TL_xData,spectrum_G5_TL_yData,spectrum_G5_TL_xData(locs_G5_1),spectrum_G5_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN5 KING SGC ThorLabs Peaks")
@@ -333,7 +333,7 @@ title("GREEN5 KING SGC ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_G5_AS_xData,spectrum_G5_AS_yData,spectrum_G5_AS_xData(locs_G5_2),spectrum_G5_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN5 KING SGC AS7262 Peaks")
@@ -390,7 +390,7 @@ figure(18)
 subplot(2,1,1);
 plot(spectrum_GRG2T_TL_xData,spectrum_GRG2T_TL_yData,spectrum_GRG2T_TL_xData(locs_GRG2T_1),spectrum_GRG2T_TL_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 2THT ThorLabs Peaks")
@@ -398,7 +398,7 @@ title("GREEN RG 2THT ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_GRG2T_AS_xData,spectrum_GRG2T_AS_yData,spectrum_GRG2T_AS_xData(locs_GRG2T_2),spectrum_GRG2T_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 2THT AS7262 Peaks")
@@ -463,7 +463,7 @@ title("GREEN RG 3THT ThorLabs Peaks")
 subplot(2,1,2);
 plot(spectrum_GRG3T_AS_xData,spectrum_GRG3T_AS_yData,spectrum_GRG3T_AS_xData(locs_GRG3T_2),spectrum_GRG3T_AS_peaks,'or')
 axis([450 650 0 1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 3THT AS7262 Peaks")
