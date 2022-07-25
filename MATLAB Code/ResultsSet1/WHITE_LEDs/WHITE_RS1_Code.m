@@ -34,7 +34,7 @@ legend("Data","Fitted curve",'Location','southeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE AS7263 AS7262 Fitted Emission Spectrum")
-% saveas(gcf,'WHITE_AS7263_Fitted_Spectrum.png')
+saveas(gcf,'WHITE_AS7263_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -48,7 +48,7 @@ axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE AS7263 Emission Spectrum");
-% saveas(gcf,'WHITE_AS7263_Emission_Spectrum.png')
+saveas(gcf,'WHITE_AS7263_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -78,7 +78,7 @@ legend("Emission Spectrum","Peak",'Location','southeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE AS7263 AS7262 Peaks")
-% saveas(gcf,'WHITE_AS7263_Peaks.png')
+saveas(gcf,'WHITE_AS7263_Peaks.png')
 
 %% WHITE_LUPA -- WHITE Magnifying glass
 
@@ -100,7 +100,7 @@ legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE Magnifying glass AS7262 Fitted Emission Spectrum")
-% saveas(gcf,'WHITE_Magnifying glass_Fitted_Spectrum.png')
+saveas(gcf,'WHITE_Magnifying glass_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -114,7 +114,7 @@ axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE Magnifying glass Emission Spectrum");
-% saveas(gcf,'WHITE_Magnifying glass_Emission_Spectrum.png')
+saveas(gcf,'WHITE_Magnifying glass_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -143,7 +143,7 @@ legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE Magnifying glass AS7262 Peaks")
-% saveas(gcf,'WHITE_Magnifying glass_Peaks.png')
+saveas(gcf,'WHITE_Magnifying glass_Peaks.png')
 
 %% WHITE_NEXUS5X_FLASH
 
@@ -165,7 +165,7 @@ legend("Data","Fitted curve",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE NEXUS5X FLASH AS7262 Fitted Emission Spectrum")
-% saveas(gcf,'WHITE_NEXUS5X_FLASH_Fitted_Spectrum.png')
+saveas(gcf,'WHITE_NEXUS5X_FLASH_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -179,7 +179,7 @@ axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE NEXUS5X FLASH Emission Spectrum");
-% saveas(gcf,'WHITE_NEXUS5X_FLASH_Emission_Spectrum.png')
+saveas(gcf,'WHITE_NEXUS5X_FLASH_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -208,7 +208,7 @@ legend("Emission Spectrum","Peak",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE NEXUS5X FLASH AS7262 Peaks")
-% saveas(gcf,'WHITE_NEXUS5X_FLASH_Peaks.png')
+saveas(gcf,'WHITE_NEXUS5X_FLASH_Peaks.png')
 
 %% WHITE_STRIP
 
