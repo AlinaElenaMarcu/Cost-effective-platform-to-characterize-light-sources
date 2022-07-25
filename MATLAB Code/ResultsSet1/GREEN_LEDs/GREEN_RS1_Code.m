@@ -34,6 +34,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN1 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN1_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -47,6 +48,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN1 Emission Spectrum");
+saveas(gcf,'GREEN1_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -73,6 +75,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN1 AS7262 Peaks")
+saveas(gcf,'GREEN1_Peaks.png')
 
 %% GREEN2
 
@@ -94,6 +97,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN2 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN2_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -107,6 +111,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN2 Emission Spectrum");
+saveas(gcf,'GREEN2_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -133,6 +138,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN2 AS7262 Peaks")
+saveas(gcf,'GREEN2_Peaks.png')
 
 %% GREEN3
 
@@ -154,6 +160,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN3 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN3_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -167,6 +174,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN3 Emission Spectrum");
+saveas(gcf,'GREEN3_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -193,6 +201,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN3 AS7262 Peaks")
+saveas(gcf,'GREEN3_Peaks.png')
 
 %% GREEN4
 
@@ -214,6 +223,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN4 AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN4_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -227,6 +237,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN4 Emission Spectrum");
+saveas(gcf,'GREEN4_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -253,6 +264,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN4 AS7262 Peaks")
+saveas(gcf,'GREEN4_Peaks.png')
 
 %% GREEN5_KING_SGC
 
@@ -274,6 +286,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN5 KING SGC AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN5_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -287,6 +300,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN5 KING SGC Emission Spectrum");
+saveas(gcf,'GREEN5_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -313,6 +327,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN5 KING SGC AS7262 Peaks")
+saveas(gcf,'GREEN5_Peaks.png')
 
 %% GREEN_RG_2THT
 
@@ -334,6 +349,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 2THT AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN_RG_2THT_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -347,6 +363,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 2THT Emission Spectrum");
+saveas(gcf,'GREEN_RG_2THT_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -373,6 +390,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 2THT AS7262 Peaks")
+saveas(gcf,'GREEN_RG_2THT_Peaks.png')
 
 %% GREEN_RG_3THT
 
@@ -394,6 +412,7 @@ legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 3THT AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN_RG_3THT_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -407,6 +426,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 3THT Emission Spectrum");
+saveas(gcf,'GREEN_RG_3THT_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -433,6 +453,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN RG 3THT AS7262 Peaks")
+saveas(gcf,'GREEN_RG_3THT_Peaks.png')
 
 %% GREEN_STRIP
 
@@ -445,7 +466,7 @@ axis([450 650 0 inf])
 legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE STRIP ThorLabs Fitted Emission Spectrum")
+title("GREEN STRIP ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
 plot(spectrum_GSTRIP_AS_fit,wavelength_AS, spectrum_GSTRIP_AS_norm);
@@ -453,7 +474,8 @@ axis([450 650 0 inf])
 legend("Data","Fitted curve");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE STRIP AS7262 Fitted Emission Spectrum")
+title("GREEN STRIP AS7262 Fitted Emission Spectrum")
+saveas(gcf,'GREEN_STRIP_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -466,7 +488,8 @@ legend("ThorLabs", "AS7262");
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE STRIP Emission Spectrum");
+title("GREEN STRIP Emission Spectrum");
+saveas(gcf,'GREEN_STRIP_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -485,11 +508,12 @@ plot(spectrum_GSTRIP_TL_xData,spectrum_GSTRIP_TL_yData,spectrum_GSTRIP_TL_xData(
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE STRIP ThorLabs Peaks")
+title("GREEN STRIP ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_GSTRIP_AS_xData,spectrum_GSTRIP_AS_yData,spectrum_GSTRIP_AS_xData(locs_GSTRIP_2),spectrum_GSTRIP_AS_peaks,'or')
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE STRIP AS7262 Peaks")
+title("GREEN STRIP AS7262 Peaks")
+saveas(gcf,'GREEN_STRIP_Peaks.png')
