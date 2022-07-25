@@ -160,7 +160,7 @@ title("RED3 ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
 plot(spectrum_R3_AS_fit,wavelength_AS, spectrum_R3_AS_norm);
-axis([450 650 0 inf])
+axis([450 700 0 inf])
 legend("Data","Fitted curve",'Location','northwest');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
