@@ -1,4 +1,6 @@
-% Plot all the LEDs in the VIOLET category -- VIOLET
+% Plot the LEDs in the VIOLET category ThorLabs vs AS7262, Plot data vs
+% fitted values, Peak detect
+% VIOLET
 
 % Load VIOLET LEDs variables -- ThorLabs and AS7262
 
