@@ -230,7 +230,7 @@ legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE STRIP AS7262 Fitted Emission Spectrum")
-% saveas(gcf,'WHITE_STRIP_Fitted_Spectrum.png')
+saveas(gcf,'WHITE_STRIP_Fitted_Spectrum.png')
 
 % Plot the emission spectrum ThorLabs vs AS7262
 
@@ -244,7 +244,7 @@ axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE STRIP Emission Spectrum");
-% saveas(gcf,'WHITE_STRIP_Emission_Spectrum.png')
+saveas(gcf,'WHITE_STRIP_Emission_Spectrum.png')
 
 % Peak detect
 
@@ -273,4 +273,4 @@ legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("WHITE STRIP AS7262 Peaks")
-% saveas(gcf,'WHITE_STRIP_Peaks.png')
+saveas(gcf,'WHITE_STRIP_Peaks.png')
