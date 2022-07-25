@@ -13,7 +13,7 @@ options_BLUE2 = fitoptions("Method","Smooth","SmoothingParam",0.001852); % smoot
 spectrum_B2_AS_fit = fit(wavelength_AS, spectrum_B2_AS_norm,'smoothingspline',options_BLUE2); % fitting of AS7262 normalized spectrum
 
 % BLUE3
-spectrum_B3_TL_fit = fit(wavelength_TL, spectrum_B3_TL,'gauss8'); %fitting of ThorLabs normalized spectrum
+spectrum_B3_TL_fit = fit(wavelength_TL, spectrum_B3_TL_norm,'gauss8'); %fitting of ThorLabs normalized spectrum
 
 options_BLUE3 = fitoptions("Method","Smooth","SmoothingParam",0.001852); % smoothing parameter
 spectrum_B3_AS_fit = fit(wavelength_AS, spectrum_B3_AS_norm,'smoothingspline',options_BLUE3); % fitting of AS7262 normalized spectrum
