@@ -1,45 +1,28 @@
-%LEDs in the WHITE category -- WHITE_AS7263, WHITE_LUPA, WHITE_NEXUS5X_FLASH, WHITE_STRIP
+%LEDs in the Nexus5X category -- Nexus5X_Gain1, Nexus5X_Gain3_7, Nexus5X_Gain16, Nexus5X_Gain64
 
-% 1. Load WHITE_AS7263 variable and convert to double
-
-% ThorLabs variable
-WHITE_AS7263_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\WHITE_LEDs\WHITE_AS7263.mat');
-wavelength_TL = double(WHITE_AS7263_TL.wavelength_nmAir); % same for all LEDs
-spectrum_W1_TL = double(WHITE_AS7263_TL.spectrum);
+% 1. Load Nexus5X_Gain1 variable and convert to double
 
 % AS7262 variable 
-WHITE_AS7263_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_AS7263.mat');
-wavelength_AS = double(WHITE_AS7263_AS.wavelenght_AS); % same for all LEDs
-spectrum_W1_AS = double(WHITE_AS7263_AS.spectrum_C);
+Nexus5X_Gain1_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_GainAll\Nexus5X_Gain1.mat');
+wavelength_AS = double(Nexus5X_Gain1_AS.wavelenght_AS); % same for all LEDs
+spectrum_G1_AS = double(Nexus5X_Gain1_AS.spectrum_C);
 
-% 2. Load WHITE_LUPA variable and convert to double
-
-% ThorLabs variable
-WHITE_LUPA_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\WHITE_LEDs\WHITE_LUPA.mat');
-spectrum_W2_TL = double(WHITE_LUPA_TL.spectrum);
+% 2. Load Nexus5X_Gain3_7 variable and convert to double
 
 % AS7262 variable 
-WHITE_LUPA_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_LUPA.mat');
-spectrum_W2_AS = double(WHITE_LUPA_AS.spectrum_C);
+Nexus5X_Gain3_7_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_GainAll\Nexus5X_Gain3_7.mat');
+spectrum_G3_7_AS = double(Nexus5X_Gain3_7_AS.spectrum_C);
 
-% 3. Load WHITE_NEXUS5X_FLASH variable and convert to double
-
-% ThorLabs variable
-WHITE_NEXUS5X_FLASH_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\WHITE_LEDs\WHITE_NEXUS5X_FLASH.mat');
-spectrum_W3_TL = double(WHITE_NEXUS5X_FLASH_TL.spectrum);
+% 3. Load Nexus5X_Gain16 variable and convert to double
 
 % AS7262 variable 
-WHITE_NEXUS5X_FLASH_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_NEXUS5X_FLASH.mat');
-spectrum_W3_AS = double(WHITE_NEXUS5X_FLASH_AS.spectrum_C);
+Nexus5X_Gain16_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_GainAll\Nexus5X_Gain16.mat');
+spectrum_G16_AS = double(Nexus5X_Gain16_AS.spectrum_C);
 
-% 4. Load WHITE_STRIP variable and convert to double
-
-% ThorLabs variable
-WHITE_STRIP_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\WHITE_LEDs\WHITE_STRIP.mat');
-spectrum_WSTRIP_TL = double(WHITE_STRIP_TL.spectrum);
+% 4. Load Nexus5X_Gain64 variable and convert to double
 
 % AS7262 variable 
-WHITE_STRIP_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_STRIP.mat');
-spectrum_WSTRIP_AS = double(WHITE_STRIP_AS.spectrum_C);
+Nexus5X_Gain64_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_GainAll\Nexus5X_Gain64.mat');
+spectrum_G64_AS = double(Nexus5X_Gain64_AS.spectrum_C);
 
 
