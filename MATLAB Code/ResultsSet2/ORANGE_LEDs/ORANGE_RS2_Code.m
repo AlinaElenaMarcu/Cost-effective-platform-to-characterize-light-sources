@@ -38,7 +38,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE ThorLabs Emission Spectrum")
-
+saveas(gcf,'ORANGE_ThorLabs_Emission_Spectrum.png')
 
 figure(2)
 plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
@@ -58,3 +58,4 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE AS7262 Emission Spectrum")
+saveas(gcf,'ORANGE_AS7262_Emission_Spectrum.png')
