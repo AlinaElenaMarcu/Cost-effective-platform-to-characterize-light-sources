@@ -36,13 +36,13 @@ plot(spectrum_GRG3T_TL_xData,spectrum_GRG3T_TL_yData,'Color',[0.4940, 0.1840, 0.
 hold on;
 plot(spectrum_GSTRIP_TL_xData,spectrum_GSTRIP_TL_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
-legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP");
+legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP",'NumColumns',3,'Location','southoutside');
 %axis([300 700 0 inf])
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN ThorLabs Emission Spectrum")
-
+saveas(gcf,'GREEN_ThorLabs_Emission_Spectrum.png')
 
 figure(2)
 plot(spectrum_G1_AS_xData,spectrum_G1_AS_yData,'r'); % red
@@ -61,8 +61,9 @@ plot(spectrum_GRG3T_AS_xData,spectrum_GRG3T_AS_yData,'Color',[0.4940, 0.1840, 0.
 hold on;
 plot(spectrum_GSTRIP_AS_xData,spectrum_GSTRIP_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
-legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP");
+legend("GREEN1","GREEN2","GREEN3","GREEN4","GREEN5 KING SGC","GREEN RG 2THT","GREEN RG 3THT","GREEN STRIP",'NumColumns',3,'Location','southoutside');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("GREEN AS7262 Emission Spectrum")
+saveas(gcf,'GREEN_AS7262_Emission_Spectrum.png')
