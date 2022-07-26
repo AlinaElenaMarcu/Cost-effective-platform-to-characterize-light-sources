@@ -5,6 +5,9 @@
 gaus = @(x,mu,sig,amp,vo)amp*exp(-(((x-mu).^2)/(2*sig.^2)))+vo;
 x = linspace(350,750,200);
 
+
+dfdfdf
+
 %% 450
 
 mu1 = 450;
