@@ -146,14 +146,14 @@ spectrum_G5_DT = imread("GREEN_KING_Spectrum_Datasheet.png");
 figure(3)
 subplot(2,2,1);
 plot(spectrum_G5_TL_xData,spectrum_G5_TL_yData)
-axis([450 650 0 inf])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ThorLabs")
 
 subplot(2,2,2);
 plot(spectrum_G5_AS_xData,spectrum_G5_AS_yData)
-axis([450 650 0 inf])
+axis([450 650 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("AS7262")
