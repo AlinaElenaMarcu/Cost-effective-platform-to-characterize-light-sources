@@ -56,7 +56,7 @@ title("Datasheet")
 
 sgtitle('BLUE Kingbright Emission Spectrum')
 
-% saveas(gcf,'BLUE1_TvAvD_Emission_Spectrum.png')
+saveas(gcf,'BLUE_TvAvD_Emission_Spectrum.png')
 
 %% RED_KING
 
@@ -89,7 +89,7 @@ spectrum_R8_AS_yData = get(plot(spectrum_R8_AS_fit),'yData')';
 
 spectrum_R8_DT = imread("RED_KING_Spectrum_Datasheet.png");
 
-figure(1)
+figure(2)
 subplot(2,2,1);
 plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData)
 axis([450 700 0 inf])
@@ -110,6 +110,58 @@ title("Datasheet")
 
 sgtitle('RED Kingbright Emission Spectrum')
 
-% saveas(gcf,'RED8_TvAvD_Emission_Spectrum.png')
+saveas(gcf,'RED_TvAvD_Emission_Spectrum.png')
 
 %% GREEN_KING
+
+% Load GREEN5_KING_SGC variable and convert to double
+
+% ThorLabs variable
+GREEN5_KING_SGC_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\GREEN_LEDs\GREEN5_KING_SGC.mat');
+spectrum_G5_TL = double(GREEN5_KING_SGC_TL.spectrum);
+
+% AS7262 variable 
+GREEN5_KING_SGC_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\GREEN_LEDs\GREEN5_KING_SGC.mat');
+spectrum_G5_AS = double(GREEN5_KING_SGC_AS.spectrum_C);
+
+% Normalize spectrum values
+spectrum_G5_TL_norm = normalize(spectrum_G5_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_G5_AS_norm = normalize(spectrum_G5_AS,'norm','inf'); % AS7262 values normalized
+
+% Fitting the spectrum values
+spectrum_G5_TL_fit = fit(wavelength_TL, spectrum_G5_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
+spectrum_G5_AS_fit = fit(wavelength_AS, spectrum_G5_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+
+% Get xData and yData from fitted plots
+spectrum_G5_TL_xData = get(plot(spectrum_G5_TL_fit),'xData')';
+spectrum_G5_TL_yData = get(plot(spectrum_G5_TL_fit),'yData')';
+
+spectrum_G5_AS_xData = get(plot(spectrum_G5_AS_fit),'xData')';
+spectrum_G5_AS_yData = get(plot(spectrum_G5_AS_fit),'yData')';
+
+% Plot the emission spectrum ThorLabs vs AS7262 vs Datasheet
+
+spectrum_G5_DT = imread("GREEN_KING_Spectrum_Datasheet.png");
+
+figure(3)
+subplot(2,2,1);
+plot(spectrum_G5_TL_xData,spectrum_G5_TL_yData)
+axis([450 650 0 inf])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("ThorLabs")
+
+subplot(2,2,2);
+plot(spectrum_G5_AS_xData,spectrum_G5_AS_yData)
+axis([450 650 0 inf])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("AS7262")
+
+subplot(2,2,[3,4]);
+imshow(spectrum_G5_DT);
+title("Datasheet")
+
+sgtitle('GREEN Kingbright Emission Spectrum')
+
+saveas(gcf,'GREEN_TvAvD_Emission_Spectrum.png')
