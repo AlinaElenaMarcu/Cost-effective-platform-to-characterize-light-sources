@@ -35,35 +35,80 @@ spectrum_B1_AS_yData = get(plot(spectrum_B1_AS_fit),'yData')';
 
 spectrum_B1_DT = imread("BLUE1_KING_Spectrum_Datasheet.png");
 
-
+figure(1)
 subplot(2,2,1);
 plot(spectrum_B1_TL_xData,spectrum_B1_TL_yData)
 axis([450 650 0 inf])
+legend("BLUE Kingbright");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE1 ThorLabs Emission Spectrum")
+title("ThorLabs Emission Spectrum")
 
 subplot(2,2,2);
 plot(spectrum_B1_AS_xData,spectrum_B1_AS_yData)
 axis([450 650 0 inf])
+legend("BLUE Kingbright");
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE1 AS7262 Emission Spectrum")
+title("AS7262 Emission Spectrum")
 
 subplot(2,2,[3,4]);
 imshow(spectrum_B1_DT);
-title("BLUE1 Datasheet Emission Spectrum")
-
-print()
+title("BLUE Kingbright Datasheet Emission Spectrum")
 
 
-% saveas(gcf,'BLUE1_TvAvD_Emission_Spectrum.png')
-
-
-
+saveas(gcf,'BLUE1_TvAvD_Emission_Spectrum.png')
 
 %% RED_KING
 
+% Load RED8_KING_SRCE variable and convert to double
 
+% ThorLabs variable
+RED8_KING_SRCE_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED8_KING_SRCE.mat');
+spectrum_R8_TL = double(RED8_KING_SRCE_TL.spectrum);
+
+% AS7262 variable 
+RED8_KING_SRCE_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED8_KING_SRCE.mat');
+spectrum_R8_AS = double(RED8_KING_SRCE_AS.spectrum_C);
+
+% Normalize spectrum values
+spectrum_R8_TL_norm = normalize(spectrum_R8_TL,'norm','inf'); % ThorLabs values normalized
+spectrum_R8_AS_norm = normalize(spectrum_R8_AS,'norm','inf'); % AS7262 values normalized
+
+% Fitting the spectrum values
+spectrum_R8_TL_fit = fit(wavelength_TL, spectrum_R8_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
+spectrum_R8_AS_fit = fit(wavelength_AS, spectrum_R8_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+
+% Get xData and yData from fitted plots
+spectrum_R8_TL_xData = get(plot(spectrum_R8_TL_fit),'xData')';
+spectrum_R8_TL_yData = get(plot(spectrum_R8_TL_fit),'yData')';
+
+spectrum_R8_AS_xData = get(plot(spectrum_R8_AS_fit),'xData')';
+spectrum_R8_AS_yData = get(plot(spectrum_R8_AS_fit),'yData')';
+
+% Plot the emission spectrum ThorLabs vs AS7262 vs Datasheet
+
+spectrum_R8_DT = imread("RED_KING_Spectrum_Datasheet.png");
+
+figure(1)
+subplot(2,2,1);
+plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData)
+axis([450 700 0 inf])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED Kingbright ThorLabs Emission Spectrum")
+
+subplot(2,2,2);
+plot(spectrum_R8_AS_xData,spectrum_R8_AS_yData)
+axis([450 700 0 inf])
+xlabel("Wavelength [nm]");
+ylabel("Intensity (normalized)");
+title("RED Kingbright AS7262 Emission Spectrum")
+
+subplot(2,2,[3,4]);
+imshow(spectrum_R8_DT);
+title("RED Kingbright Datasheet Emission Spectrum")
+
+% saveas(gcf,'RED8_TvAvD_Emission_Spectrum.png')
 
 %% GREEN_KING
