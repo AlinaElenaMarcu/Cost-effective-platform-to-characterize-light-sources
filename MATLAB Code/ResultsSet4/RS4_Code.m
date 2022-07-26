@@ -41,18 +41,20 @@ plot(spectrum_B1_TL_xData,spectrum_B1_TL_yData)
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE Kingbright ThorLabs Emission Spectrum")
+title("ThorLabs")
 
 subplot(2,2,2);
 plot(spectrum_B1_AS_xData,spectrum_B1_AS_yData)
 axis([450 650 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("BLUE Kingbright AS7262 Emission Spectrum")
+title("AS7262")
 
 subplot(2,2,[3,4]);
 imshow(spectrum_B1_DT);
-title("BLUE Kingbright Datasheet Emission Spectrum")
+title("Datasheet")
+
+sgtitle('BLUE Kingbright Emission Spectrum')
 
 % saveas(gcf,'BLUE1_TvAvD_Emission_Spectrum.png')
 
@@ -85,26 +87,28 @@ spectrum_R8_AS_yData = get(plot(spectrum_R8_AS_fit),'yData')';
 
 % Plot the emission spectrum ThorLabs vs AS7262 vs Datasheet
 
-spectrum_R8_DT = imread("");
+spectrum_R8_DT = imread("RED_KING_Spectrum_Datasheet.png");
 
 figure(1)
 subplot(2,2,1);
 plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData)
-axis([450 650 0 inf])
+axis([450 700 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("RED Kingbright ThorLabs Emission Spectrum")
+title("ThorLabs")
 
 subplot(2,2,2);
 plot(spectrum_R8_AS_xData,spectrum_R8_AS_yData)
-axis([450 650 0 inf])
+axis([450 700 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
-title("RED Kingbright AS7262 Emission Spectrum")
+title("AS7262")
 
 subplot(2,2,[3,4]);
 imshow(spectrum_R8_DT);
-title("RED Kingbright Datasheet Emission Spectrum")
+title("Datasheet")
+
+sgtitle('RED Kingbright Emission Spectrum')
 
 % saveas(gcf,'RED8_TvAvD_Emission_Spectrum.png')
 
