@@ -35,7 +35,6 @@ spectrum_B1_AS_yData = get(plot(spectrum_B1_AS_fit),'yData')';
 
 spectrum_B1_DT = imread("BLUE1_KING_Spectrum_Datasheet.png");
 
-
 subplot(2,2,1);
 plot(spectrum_B1_TL_xData,spectrum_B1_TL_yData)
 axis([450 650 0 inf])
@@ -54,11 +53,7 @@ subplot(2,2,[3,4]);
 imshow(spectrum_B1_DT);
 title("BLUE1 Datasheet Emission Spectrum")
 
-
 % saveas(gcf,'BLUE1_TvAvD_Emission_Spectrum.png')
-
-
-
 
 %% RED_KING
 
