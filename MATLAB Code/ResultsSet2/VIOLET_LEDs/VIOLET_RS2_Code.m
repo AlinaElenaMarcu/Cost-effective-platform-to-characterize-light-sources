@@ -34,18 +34,19 @@ spectrum_V_AS_yData = get(plot(spectrum_V_AS_fit),'yData')';
 
 figure(1)
 plot(spectrum_V_TL_xData,spectrum_V_TL_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
-legend("VIOLET",'Location','northwest');
+legend("VIOLET",'Location','northeast');
 %axis([300 700 0 inf])
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("VIOLET ThorLabs Emission Spectrum")
-
+saveas(gcf,'VIOLET_ThorLabs_Emission_Spectrum.png')
 
 figure(2)
 plot(spectrum_V_AS_xData,spectrum_V_AS_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
-legend("VIOLET",'Location','northwest');
+legend("VIOLET",'Location','northeast');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("VIOLET AS7262 Emission Spectrum")
+saveas(gcf,'VIOLET_AS7262_Emission_Spectrum.png')
