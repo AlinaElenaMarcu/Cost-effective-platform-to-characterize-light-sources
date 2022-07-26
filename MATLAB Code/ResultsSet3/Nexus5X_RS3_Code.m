@@ -4,3 +4,7 @@
 % Load Nexus5x Flash LED variables -- AS7262
 
 Nexus5X_GetVariablesFromFiles;
+
+% Normalize
+
+Nexus5X_GetNormalizedValues;
