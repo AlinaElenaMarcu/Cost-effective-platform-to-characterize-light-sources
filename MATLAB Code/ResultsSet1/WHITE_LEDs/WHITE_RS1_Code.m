@@ -20,7 +20,7 @@ WHITE_GetFittedValues;
 
 figure(1)
 subplot(2,1,1);
-plot(spectrum_W1_TL_fit,wavelength_TL, spectrum_W1_TL_norm);
+plot(spectrum_W1_TL_fit,wavelength_TL, spectrum_W1_TL_norm)
 axis([450 650 0 inf])
 legend("Data","Fitted curve",'Location','southeast');
 xlabel("Wavelength [nm]");
@@ -28,7 +28,7 @@ ylabel("Intensity (normalized)");
 title("WHITE AS7263 ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
-plot(spectrum_W1_AS_fit,wavelength_AS, spectrum_W1_AS_norm);
+plot(spectrum_W1_AS_fit,wavelength_AS, spectrum_W1_AS_norm)
 axis([450 650 0 inf])
 legend("Data","Fitted curve",'Location','southeast');
 xlabel("Wavelength [nm]");
