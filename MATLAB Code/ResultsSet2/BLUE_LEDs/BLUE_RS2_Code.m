@@ -42,6 +42,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE ThorLabs Emission Spectrum")
+saveas(gcf,'BLUE1_ThorLabs_Emission_Spectrum.png')
 
 
 figure(2)
@@ -66,7 +67,7 @@ axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("BLUE AS7262 Emission Spectrum")
-
+saveas(gcf,'BLUE1_AS7262_Emission_Spectrum.png')
 
 
 
