@@ -8,3 +8,11 @@ Nexus5X_GetVariablesFromFiles;
 % Normalize
 
 Nexus5X_GetNormalizedValues;
+
+% Fitting
+
+Nexus5X_GetFittedValues;
+
+% Get xData and yData from fitted plots
+
+Nexus5X_GetDatafromFittedPlot;
