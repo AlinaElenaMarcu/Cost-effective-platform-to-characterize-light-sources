@@ -3,6 +3,18 @@
 % Load WHITE_NEXUS5X_FLASH variable and convert to double - ESP32
 
 % AS7262 variable 
+Nexus5X_ESP_v2_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_RPI\Nexus5X_ESP_v2.mat');
+wavelength_AS = double(Nexus5X_ESP_v2_AS.wavelenght_AS); % same for all LEDs
+spectrum_ESP_AS = double(Nexus5X_ESP_v2_AS.spectrum_C);
+
+% Load Nexus5X_RPI variable and convert to double - RPI
+
+% AS7262 variable 
+Nexus5X_RPI_v2_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_RPI\Nexus5X_RPI_v2.mat');
+spectrum_RPI_AS = double(Nexus5X_RPI_v2_AS.spectrum_C);
+
+%{
+% AS7262 variable 
 WHITE_NEXUS5X_FLASH_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_NEXUS5X_FLASH.mat');
 wavelength_AS = double(WHITE_NEXUS5X_FLASH_AS.wavelenght_AS); % same for all LEDs
 spectrum_ESP_AS = double(WHITE_NEXUS5X_FLASH_AS.spectrum_C);
@@ -12,6 +24,7 @@ spectrum_ESP_AS = double(WHITE_NEXUS5X_FLASH_AS.spectrum_C);
 % AS7262 variable 
 Nexus5X_RPI_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\Nexus5X_RPI\Nexus5X_RPI.mat');
 spectrum_RPI_AS = double(Nexus5X_RPI_AS.spectrum_C);
+%}
 
 % Normalize spectrum values
 spectrum_ESP_AS_norm = normalize(spectrum_ESP_AS,'norm','inf'); % AS7262 values normalized
