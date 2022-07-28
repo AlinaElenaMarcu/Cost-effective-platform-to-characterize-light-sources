@@ -20,12 +20,6 @@ ORANGE_GetDatafromFittedPlots;
 % Plot
 
 figure(1)
-plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
-axis([450 650 0 1])
-
-
-%{
-figure(1)
 plot(spectrum_O1_TL_xData,spectrum_O1_TL_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
 plot(spectrum_O2_TL_xData,spectrum_O2_TL_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
@@ -40,11 +34,12 @@ plot(spectrum_O6_TL_xData,spectrum_O6_TL_yData,'Color',[0.4660, 0.6740, 0.1880])
 hold on;
 legend("ORANGE1","ORANGE2","ORANGE3","ORANGE4","ORANGE5","ORANGE6",'Location','northwest');
 %axis([300 700 0 inf])
-axis([450 650 0 1])
+% axis([450 650 0 1])
+axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE ThorLabs Emission Spectrum")
-saveas(gcf,'ORANGE_ThorLabs_Emission_Spectrum.png')
+% saveas(gcf,'ORANGE_ThorLabs_Emission_Spectrum.png')
 
 figure(2)
 plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
@@ -60,10 +55,9 @@ hold on;
 plot(spectrum_O6_AS_xData,spectrum_O6_AS_yData,'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
 legend("ORANGE1","ORANGE2","ORANGE3","ORANGE4","ORANGE5","ORANGE6",'Location','northwest');
-axis([450 650 0 1])
+% axis([450 650 0 1])
+axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE AS7262 Emission Spectrum")
-saveas(gcf,'ORANGE_AS7262_Emission_Spectrum.png')
-
-%}
+% saveas(gcf,'ORANGE_AS7262_Emission_Spectrum.png')
