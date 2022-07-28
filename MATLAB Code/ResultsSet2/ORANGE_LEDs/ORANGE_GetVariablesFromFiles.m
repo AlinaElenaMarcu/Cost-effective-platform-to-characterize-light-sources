@@ -25,7 +25,7 @@ spectrum_O2_TL = double(ORANGE2_TL.spectrum);
 
 % AS7262 variable - VIS
 ORANGE2_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE2.mat');
-spectrum_O2_AS = double(ORANGE2_AS.spectrum_C);
+spectrum_O2V_AS = double(ORANGE2_AS.spectrum_C);
 
 % AS7262 variable - NIR
 ORANGE2_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE2_NIR.mat');
@@ -39,7 +39,7 @@ spectrum_O3_TL = double(ORANGE3_TL.spectrum);
 
 % AS7262 variable - VIS
 ORANGE3_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE3.mat');
-spectrum_O3_AS = double(ORANGE3_AS.spectrum_C);
+spectrum_O3V_AS = double(ORANGE3_AS.spectrum_C);
 
 % AS7262 variable - NIR
 ORANGE3_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE3_NIR.mat');
@@ -53,7 +53,7 @@ spectrum_O4_TL = double(ORANGE4_TL.spectrum);
 
 % AS7262 variable - VIS
 ORANGE4_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE4.mat');
-spectrum_O4_AS = double(ORANGE4_AS.spectrum_C);
+spectrum_O4V_AS = double(ORANGE4_AS.spectrum_C);
 
 % AS7262 variable - NIR
 ORANGE4_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\ORANGE4_NIR.mat');
