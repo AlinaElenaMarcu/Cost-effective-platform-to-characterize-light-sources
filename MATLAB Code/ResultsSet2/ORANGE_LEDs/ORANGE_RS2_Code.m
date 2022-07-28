@@ -20,6 +20,19 @@ ORANGE_GetDatafromFittedPlots;
 % Plot
 
 figure(1)
+plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
+axis([450 650 0 1])
+
+figure(2)
+plot(spectrum_O1N_AS_xData,spectrum_O1N_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
+axis([600 900 0 1])
+
+figure(3)
+plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,spectrum_O1N_AS_xData,spectrum_O1N_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
+axis([450 900 0 1])
+
+%{
+figure(1)
 plot(spectrum_O1_TL_xData,spectrum_O1_TL_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 hold on;
 plot(spectrum_O2_TL_xData,spectrum_O2_TL_yData,'Color',[0.4940, 0.1840, 0.5560]); % #7E2F8E color
@@ -59,3 +72,5 @@ xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ORANGE AS7262 Emission Spectrum")
 saveas(gcf,'ORANGE_AS7262_Emission_Spectrum.png')
+
+%}
