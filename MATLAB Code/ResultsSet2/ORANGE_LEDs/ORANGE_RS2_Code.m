@@ -23,13 +23,6 @@ figure(1)
 plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
 axis([450 650 0 1])
 
-figure(2)
-plot(spectrum_O1N_AS_xData,spectrum_O1N_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
-axis([600 900 0 1])
-
-figure(3)
-plot(spectrum_O1_AS_xData,spectrum_O1_AS_yData,spectrum_O1N_AS_xData,spectrum_O1N_AS_yData,'Color',[0.6350, 0.0780, 0.1840]); % #A2142F color
-axis([450 900 0 1])
 
 %{
 figure(1)
