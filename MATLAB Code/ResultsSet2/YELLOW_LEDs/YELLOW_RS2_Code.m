@@ -27,7 +27,8 @@ plot(spectrum_YSTRIP_TL_xData,spectrum_YSTRIP_TL_yData,'Color',[0, 0.4470, 0.741
 hold on;
 legend("YELLOW1","YELLOW2","YELLOW STRIP",'NumColumns',3,'Location','southoutside');
 %axis([300 700 0 inf])
-axis([450 650 0 1])
+% axis([450 650 0 1])
+axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW ThorLabs Emission Spectrum")
@@ -41,7 +42,8 @@ hold on;
 plot(spectrum_YSTRIP_AS_xData,spectrum_YSTRIP_AS_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
 hold on;
 legend("YELLOW1","YELLOW2","YELLOW STRIP",'NumColumns',3,'Location','southoutside');
-axis([450 650 0 1])
+% axis([450 650 0 1])
+axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW AS7262 Emission Spectrum")
