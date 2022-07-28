@@ -4,7 +4,7 @@
 
 % ThorLabs variable
 ORANGE1_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE1.mat');
-wavelengthVIS_TL = double(ORANGE1_TL.wavelength_nmAir); % same for all LEDs
+wavelength_TL = double(ORANGE1_TL.wavelength_nmAir); % same for all LEDs
 spectrum_O1_TL = double(ORANGE1_TL.spectrum);
 
 % AS7262 variable - VIS
