@@ -29,8 +29,14 @@ WHITE_NEXUS5X_FLASH_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements
 spectrum_W3_TL = double(WHITE_NEXUS5X_FLASH_TL.spectrum);
 
 % AS7262 variable 
+WHITE_NEXUS5X_FLASH_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_NEXUS5X_FLASH_v2.mat');
+spectrum_W3_AS = double(WHITE_NEXUS5X_FLASH_AS.spectrum_C);
+
+%{
+% AS7262 variable 
 WHITE_NEXUS5X_FLASH_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\WHITE_LEDs\WHITE_NEXUS5X_FLASH.mat');
 spectrum_W3_AS = double(WHITE_NEXUS5X_FLASH_AS.spectrum_C);
+%}
 
 % 4. Load WHITE_STRIP variable and convert to double
 
