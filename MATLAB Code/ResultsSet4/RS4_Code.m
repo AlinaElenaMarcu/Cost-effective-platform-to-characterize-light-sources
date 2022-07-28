@@ -66,9 +66,17 @@ saveas(gcf,'BLUE_TvAvD_Emission_Spectrum.png')
 RED8_KING_SRCE_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED8_KING_SRCE.mat');
 spectrum_R8_TL = double(RED8_KING_SRCE_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 RED8_KING_SRCE_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED8_KING_SRCE.mat');
-spectrum_R8_AS = double(RED8_KING_SRCE_AS.spectrum_C);
+spectrum_R8V_AS = double(RED8_KING_SRCE_AS.spectrum_C);
+
+% AS7262 variable - NIR
+RED8_KING_SRCE_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED8_KING_SRCE_NIR.mat');
+spectrum_R8N_AS = double(RED8_KING_SRCE_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+load("wavelengthC_AS.mat")
+spectrum_R8_AS = [spectrum_R8V_AS(1:5);spectrum_R8N_AS(1);spectrum_R8V_AS(6);spectrum_R8N_AS(2:6)];
 
 % Normalize spectrum values
 spectrum_R8_TL_norm = normalize(spectrum_R8_TL,'norm','inf'); % ThorLabs values normalized
@@ -76,7 +84,7 @@ spectrum_R8_AS_norm = normalize(spectrum_R8_AS,'norm','inf'); % AS7262 values no
 
 % Fitting the spectrum values
 spectrum_R8_TL_fit = fit(wavelength_TL, spectrum_R8_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
-spectrum_R8_AS_fit = fit(wavelength_AS, spectrum_R8_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+spectrum_R8_AS_fit = fit(wavelengthC_AS, spectrum_R8_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
 
 % Get xData and yData from fitted plots
 spectrum_R8_TL_xData = get(plot(spectrum_R8_TL_fit),'xData')';
@@ -92,14 +100,14 @@ spectrum_R8_DT = imread("RED_KING_Spectrum_Datasheet.png");
 figure(2)
 subplot(2,2,1);
 plot(spectrum_R8_TL_xData,spectrum_R8_TL_yData)
-axis([450 700 0 inf])
+axis([450 730 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("ThorLabs")
 
 subplot(2,2,2);
 plot(spectrum_R8_AS_xData,spectrum_R8_AS_yData)
-axis([450 700 0 inf])
+axis([450 730 0 inf])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("AS7262")
