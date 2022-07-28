@@ -19,7 +19,7 @@ spectrum_O1N_AS = double(ORANGE1_NIR_AS.spectrum_C);
 
 % AS7262 variable - VIS+NIR
 load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\wavelengthC_AS.mat') % same for all LEDs
-load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\spectrum_O1_AS.mat')
+spectrum_O1_AS = [spectrum_O1V_AS(1:5);spectrum_O1N_AS(1);spectrum_O1V_AS(6);spectrum_O1N_AS(2:6)];
 
 % 2. Load ORANGE2 variable and convert to double
 
@@ -36,7 +36,7 @@ ORANGE2_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\
 spectrum_O2N_AS = double(ORANGE2_NIR_AS.spectrum_C);
 
 % AS7262 variable - VIS+NIR
-load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\spectrum_O2_AS.mat')
+spectrum_O2_AS = [spectrum_O2V_AS(1:5);spectrum_O2N_AS(1);spectrum_O2V_AS(6);spectrum_O2N_AS(2:6)];
 
 % 3. Load ORANGE3 variable and convert to double
 
@@ -53,7 +53,7 @@ ORANGE3_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\
 spectrum_O3N_AS = double(ORANGE3_NIR_AS.spectrum_C);
 
 % AS7262 variable - VIS+NIR
-load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\spectrum_O3_AS.mat')
+spectrum_O3_AS = [spectrum_O3V_AS(1:5);spectrum_O3N_AS(1);spectrum_O3V_AS(6);spectrum_O3N_AS(2:6)];
 
 % 4. Load ORANGE4 variable and convert to double
 
@@ -70,7 +70,7 @@ ORANGE4_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\
 spectrum_O4N_AS = double(ORANGE4_NIR_AS.spectrum_C);
 
 % AS7262 variable - VIS+NIR
-load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\spectrum_O4_AS.mat')
+spectrum_O4_AS = [spectrum_O4V_AS(1:5);spectrum_O4N_AS(1);spectrum_O4V_AS(6);spectrum_O4N_AS(2:6)];
 
 % 5. Load ORANGE5 variable and convert to double
 
