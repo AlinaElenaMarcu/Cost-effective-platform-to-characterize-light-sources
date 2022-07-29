@@ -44,6 +44,13 @@ spectrum_Y2_AS = [spectrum_Y2V_AS(1:5);spectrum_Y2N_AS(1);spectrum_Y2V_AS(6);spe
 YELLOW_STRIP_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\YELLOW_LEDs\YELLOW_STRIP.mat');
 spectrum_YSTRIP_TL = double(YELLOW_STRIP_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 YELLOW_STRIP_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\YELLOW_LEDs\YELLOW_STRIP.mat');
-spectrum_YSTRIP_AS = double(YELLOW_STRIP_AS.spectrum_C);
+spectrum_YSTRIPV_AS = double(YELLOW_STRIP_AS.spectrum_C);
+
+% AS7262 variable - NIR
+YELLOW_STRIP_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\YELLOW_LEDs\YELLOW_STRIP_NIR.mat');
+spectrum_YSTRIPN_AS = double(YELLOW_STRIP_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+spectrum_YSTRIP_AS = [spectrum_YSTRIPV_AS(1:5);spectrum_YSTRIPN_AS(1);spectrum_YSTRIPV_AS(6);spectrum_YSTRIPN_AS(2:6)];
