@@ -78,9 +78,16 @@ spectrum_R4_AS = [spectrum_R4V_AS(1:5);spectrum_R4N_AS(1);spectrum_R4V_AS(6);spe
 RED5_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED5.mat');
 spectrum_R5_TL = double(RED5_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 RED5_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED5.mat');
-spectrum_R5_AS = double(RED5_AS.spectrum_C);
+spectrum_R5V_AS = double(RED5_AS.spectrum_C);
+
+% AS7262 variable - NIR
+RED5_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED5_NIR.mat');
+spectrum_R5N_AS = double(RED5_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+spectrum_R5_AS = [spectrum_R5V_AS(1:5);spectrum_R5N_AS(1);spectrum_R5V_AS(6);spectrum_R5N_AS(2:6)];
 
 %% 6. Load RED6 variable and convert to double
 
@@ -122,9 +129,16 @@ spectrum_R8_AS = [spectrum_R8V_AS(1:5);spectrum_R8N_AS(1);spectrum_R8V_AS(6);spe
 RED_RG_2THT_RED7_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED_RG_2THT_RED7.mat');
 spectrum_RRG2T_TL = double(RED_RG_2THT_RED7_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 RED_RG_2THT_RED7_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_RG_2THT_RED7.mat');
-spectrum_RRG2T_AS = double(RED_RG_2THT_RED7_AS.spectrum_C);
+spectrum_RRG2TV_AS = double(RED_RG_2THT_RED7_AS.spectrum_C);
+
+% AS7262 variable - NIR
+RED_RG_2THT_RED7_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_RG_2THT_RED7_NIR.mat');
+spectrum_RRG2TN_AS = double(RED_RG_2THT_RED7_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+spectrum_RRG2T_AS = [spectrum_RRG2TV_AS(1:5);spectrum_RRG2TN_AS(1);spectrum_RRG2TV_AS(6);spectrum_RRG2TN_AS(2:6)];
 
 %% 9. Load RED_RG_3THT variable and convert to double
 
@@ -132,9 +146,16 @@ spectrum_RRG2T_AS = double(RED_RG_2THT_RED7_AS.spectrum_C);
 RED_RG_3THT_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED_RG_3THT.mat');
 spectrum_RRG3T_TL = double(RED_RG_3THT_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 RED_RG_3THT_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_RG_3THT.mat');
-spectrum_RRG3T_AS = double(RED_RG_3THT_AS.spectrum_C);
+spectrum_RRG3TV_AS = double(RED_RG_3THT_AS.spectrum_C);
+
+% AS7262 variable - NIR
+RED_RG_3THT_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_RG_3THT_NIR.mat');
+spectrum_RRG3TN_AS = double(RED_RG_3THT_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+spectrum_RRG3T_AS = [spectrum_RRG3TV_AS(1:5);spectrum_RRG3TN_AS(1);spectrum_RRG3TV_AS(6);spectrum_RRG3TN_AS(2:6)];
 
 %% 10. Load RED_STRIP variable and convert to double
 
@@ -142,6 +163,13 @@ spectrum_RRG3T_AS = double(RED_RG_3THT_AS.spectrum_C);
 RED_STRIP_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\RED_LEDs\RED_STRIP.mat');
 spectrum_RSTRIP_TL = double(RED_STRIP_TL.spectrum);
 
-% AS7262 variable 
+% AS7262 variable - VIS
 RED_STRIP_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_STRIP.mat');
-spectrum_RSTRIP_AS = double(RED_STRIP_AS.spectrum_C);
+spectrum_RSTRIPV_AS = double(RED_STRIP_AS.spectrum_C);
+
+% AS7262 variable - NIR
+RED_STRIP_NIR_AS = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\RED_LEDs\RED_STRIP_NIR.mat');
+spectrum_RSTRIPN_AS = double(RED_STRIP_NIR_AS.spectrum_C);
+
+% AS7262 variable - VIS+NIR
+spectrum_RSTRIP_AS = [spectrum_RSTRIPV_AS(1:5);spectrum_RSTRIPN_AS(1);spectrum_RSTRIPV_AS(6);spectrum_RSTRIPN_AS(2:6)];
