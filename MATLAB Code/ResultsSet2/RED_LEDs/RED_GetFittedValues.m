@@ -18,7 +18,7 @@ spectrum_R4_AS_fit = fit(wavelengthC_AS, spectrum_R4_AS_norm,'pchipinterp'); % f
 
 % RED5
 spectrum_R5_TL_fit = fit(wavelength_TL, spectrum_R5_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
-spectrum_R5_AS_fit = fit(wavelength_AS, spectrum_R5_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+spectrum_R5_AS_fit = fit(wavelengthC_AS, spectrum_R5_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
 
 % RED6
 spectrum_R6_TL_fit = fit(wavelength_TL, spectrum_R6_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
@@ -30,12 +30,12 @@ spectrum_R8_AS_fit = fit(wavelengthC_AS, spectrum_R8_AS_norm,'pchipinterp'); % f
 
 % RED_RG_2THT_RED7
 spectrum_RRG2T_TL_fit = fit(wavelength_TL, spectrum_RRG2T_TL_norm,'gauss6'); %fitting of ThorLabs normalized spectrum
-spectrum_RRG2T_AS_fit = fit(wavelength_AS, spectrum_RRG2T_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+spectrum_RRG2T_AS_fit = fit(wavelengthC_AS, spectrum_RRG2T_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
 
 % RED_RG_3THT
 spectrum_RRG3T_TL_fit = fit(wavelength_TL, spectrum_RRG3T_TL_norm,'gauss5'); %fitting of ThorLabs normalized spectrum
-spectrum_RRG3T_AS_fit = fit(wavelength_AS, spectrum_RRG3T_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+spectrum_RRG3T_AS_fit = fit(wavelengthC_AS, spectrum_RRG3T_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
 
 % RED_STRIP
 spectrum_RSTRIP_TL_fit = fit(wavelength_TL, spectrum_RSTRIP_TL_norm,'gauss5'); %fitting of ThorLabs normalized spectrum
-spectrum_RSTRIP_AS_fit = fit(wavelength_AS, spectrum_RSTRIP_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
+spectrum_RSTRIP_AS_fit = fit(wavelengthC_AS, spectrum_RSTRIP_AS_norm,'pchipinterp'); % fitting of AS7262 normalized spectrum
