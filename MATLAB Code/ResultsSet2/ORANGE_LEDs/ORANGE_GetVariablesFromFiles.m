@@ -21,7 +21,7 @@ spectrum_O1N_AS = double(ORANGE1_NIR_AS.spectrum_C);
 load('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\AS7262\LEDs_Gain1\ORANGE_LEDs\wavelengthC_AS.mat') % same for all LEDs
 spectrum_O1_AS = [spectrum_O1V_AS(1:5);spectrum_O1N_AS(1);spectrum_O1V_AS(6);spectrum_O1N_AS(2:6)];
 
-%% 2. Load ORANGE2 variable and convert to double
+% 2. Load ORANGE2 variable and convert to double
 
 % ThorLabs variable
 ORANGE2_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE2.mat');
@@ -38,7 +38,7 @@ spectrum_O2N_AS = double(ORANGE2_NIR_AS.spectrum_C);
 % AS7262 variable - VIS+NIR
 spectrum_O2_AS = [spectrum_O2V_AS(1:5);spectrum_O2N_AS(1);spectrum_O2V_AS(6);spectrum_O2N_AS(2:6)];
 
-%% 3. Load ORANGE3 variable and convert to double
+% 3. Load ORANGE3 variable and convert to double
 
 % ThorLabs variable
 ORANGE3_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE3.mat');
@@ -55,7 +55,7 @@ spectrum_O3N_AS = double(ORANGE3_NIR_AS.spectrum_C);
 % AS7262 variable - VIS+NIR
 spectrum_O3_AS = [spectrum_O3V_AS(1:5);spectrum_O3N_AS(1);spectrum_O3V_AS(6);spectrum_O3N_AS(2:6)];
 
-%% 4. Load ORANGE4 variable and convert to double
+% 4. Load ORANGE4 variable and convert to double
 
 % ThorLabs variable
 ORANGE4_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE4.mat');
@@ -72,7 +72,7 @@ spectrum_O4N_AS = double(ORANGE4_NIR_AS.spectrum_C);
 % AS7262 variable - VIS+NIR
 spectrum_O4_AS = [spectrum_O4V_AS(1:5);spectrum_O4N_AS(1);spectrum_O4V_AS(6);spectrum_O4N_AS(2:6)];
 
-%% 5. Load ORANGE5 variable and convert to double
+% 5. Load ORANGE5 variable and convert to double
 
 % ThorLabs variable
 ORANGE5_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE5.mat');
@@ -89,7 +89,7 @@ spectrum_O5N_AS = double(ORANGE5_NIR_AS.spectrum_C);
 % AS7262 variable - VIS+NIR
 spectrum_O5_AS = [spectrum_O5V_AS(1:5);spectrum_O5N_AS(1);spectrum_O5V_AS(6);spectrum_O5N_AS(2:6)];
 
-%% 6. Load ORANGE6 variable and convert to double
+% 6. Load ORANGE6 variable and convert to double
 
 % ThorLabs variable
 ORANGE6_TL = load ('D:\Proiecte\GitHub\LEDChar_ATOM2022\Measurements\ThorLabs\ORANGE_LEDs\ORANGE6.mat');
