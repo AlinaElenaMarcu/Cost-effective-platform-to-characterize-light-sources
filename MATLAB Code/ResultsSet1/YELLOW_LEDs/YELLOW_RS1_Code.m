@@ -21,16 +21,16 @@ YELLOW_GetFittedValues;
 figure(1)
 subplot(2,1,1);
 plot(spectrum_Y1_TL_fit,wavelength_TL, spectrum_Y1_TL_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW1 ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
-plot(spectrum_Y1_AS_fit,wavelength_AS, spectrum_Y1_AS_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+plot(spectrum_Y1_AS_fit,wavelengthC_AS, spectrum_Y1_AS_norm);
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW1 AS7262 Fitted Emission Spectrum")
@@ -43,8 +43,8 @@ spectrum_Y1_TL_plot = plot(spectrum_Y1_TL_fit,'b');
 hold on;
 spectrum_Y1_AS_plot = plot(spectrum_Y1_AS_fit,'r');
 hold on;
-legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1.1])
+legend("ThorLabs", "AS7262",'Location','northeast');
+axis([450 860 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW1 Emission Spectrum");
@@ -65,16 +65,16 @@ spectrum_Y1_AS_yData = get(spectrum_Y1_AS_plot,'yData')';
 figure(3)
 subplot(2,1,1);
 plot(spectrum_Y1_TL_xData,spectrum_Y1_TL_yData,spectrum_Y1_TL_xData(locs_W1_1),spectrum_Y1_TL_peaks,'or')
-axis([450 650 0 1.1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+axis([450 860 0 1.1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW1 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_Y1_AS_xData,spectrum_Y1_AS_yData,spectrum_Y1_AS_xData(locs_W1_2),spectrum_Y1_AS_peaks,'or')
-axis([450 650 0 1.1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+axis([450 860 0 1.1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW1 AS7262 Peaks")
@@ -87,16 +87,16 @@ saveas(gcf,'YELLOW1_Peaks.png')
 figure(4)
 subplot(2,1,1);
 plot(spectrum_Y2_TL_fit,wavelength_TL, spectrum_Y2_TL_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW2 ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
-plot(spectrum_Y2_AS_fit,wavelength_AS, spectrum_Y2_AS_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+plot(spectrum_Y2_AS_fit,wavelengthC_AS, spectrum_Y2_AS_norm);
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW2 AS7262 Fitted Emission Spectrum")
@@ -109,8 +109,8 @@ spectrum_Y2_TL_plot = plot(spectrum_Y2_TL_fit,'b');
 hold on;
 spectrum_Y2_AS_plot = plot(spectrum_Y2_AS_fit,'r');
 hold on;
-legend("ThorLabs", "AS7262",'Location','northwest');
-axis([450 650 0 1.1])
+legend("ThorLabs", "AS7262",'Location','northeast');
+axis([450 860 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW2 Emission Spectrum");
@@ -130,16 +130,16 @@ spectrum_Y2_AS_yData = get(spectrum_Y2_AS_plot,'yData')';
 figure(6)
 subplot(2,1,1);
 plot(spectrum_Y2_TL_xData,spectrum_Y2_TL_yData,spectrum_Y2_TL_xData(locs_Y2_1),spectrum_Y2_TL_peaks,'or')
-axis([450 650 0 1.1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+axis([450 860 0 1.1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW2 ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_Y2_AS_xData,spectrum_Y2_AS_yData,spectrum_Y2_AS_xData(locs_Y2_2),spectrum_Y2_AS_peaks,'or')
-axis([450 650 0 1.1])
-legend("Emission Spectrum","Peak",'Location','northwest');
+axis([450 860 0 1.1])
+legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW2 AS7262 Peaks")
@@ -152,16 +152,16 @@ saveas(gcf,'YELLOW2_Peaks.png')
 figure(7)
 subplot(2,1,1);
 plot(spectrum_YSTRIP_TL_fit,wavelength_TL, spectrum_YSTRIP_TL_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW STRIP ThorLabs Fitted Emission Spectrum")
 
 subplot(2,1,2);
-plot(spectrum_YSTRIP_AS_fit,wavelength_AS, spectrum_YSTRIP_AS_norm);
-axis([450 650 0 inf])
-legend("Data","Fitted curve",'Location','northwest');
+plot(spectrum_YSTRIP_AS_fit,wavelengthC_AS, spectrum_YSTRIP_AS_norm);
+axis([450 860 0 inf])
+legend("Data","Fitted curve",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW STRIP AS7262 Fitted Emission Spectrum")
@@ -175,7 +175,7 @@ hold on;
 spectrum_YSTRIP_AS_plot = plot(spectrum_YSTRIP_AS_fit,'r');
 hold on;
 legend("ThorLabs", "AS7262",'Location','northeast');
-axis([450 650 0 1.1])
+axis([450 860 0 1.1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("YELLOW STRIP Emission Spectrum");
@@ -195,7 +195,7 @@ spectrum_YSTRIP_AS_yData = get(spectrum_YSTRIP_AS_plot,'yData')';
 figure(9)
 subplot(2,1,1);
 plot(spectrum_YSTRIP_TL_xData,spectrum_YSTRIP_TL_yData,spectrum_YSTRIP_TL_xData(locs_Y3_1),spectrum_YSTRIP_TL_peaks,'or')
-axis([450 650 0 1.1])
+axis([450 860 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
@@ -203,7 +203,7 @@ title("YELLOW STRIP ThorLabs Peaks")
 
 subplot(2,1,2);
 plot(spectrum_YSTRIP_AS_xData,spectrum_YSTRIP_AS_yData,spectrum_YSTRIP_AS_xData(locs_Y3_2),spectrum_YSTRIP_AS_peaks,'or')
-axis([450 650 0 1.1])
+axis([450 860 0 1.1])
 legend("Emission Spectrum","Peak",'Location','northeast');
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
