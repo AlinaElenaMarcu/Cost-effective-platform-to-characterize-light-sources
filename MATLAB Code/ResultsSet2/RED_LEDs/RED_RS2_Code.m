@@ -40,13 +40,13 @@ plot(spectrum_RRG3T_TL_xData,spectrum_RRG3T_TL_yData,'Color',[0.8500, 0.3250, 0.
 hold on;
 plot(spectrum_RSTRIP_TL_xData,spectrum_RSTRIP_TL_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
 hold on;
-legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northwest');
+legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northeast');
 %axis([300 700 0 inf])
 axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("RED ThorLabs Emission Spectrum")
-% saveas(gcf,'RED1_ThorLabs_Emission_Spectrum.png')
+saveas(gcf,'RED_ThorLabs_Emission_Spectrum.png')
 
 
 figure(2)
@@ -70,10 +70,10 @@ plot(spectrum_RRG3T_AS_xData,spectrum_RRG3T_AS_yData,'Color',[0.8500, 0.3250, 0.
 hold on;
 plot(spectrum_RSTRIP_AS_xData,spectrum_RSTRIP_AS_yData,'Color',[0, 0.4470, 0.7410]); % #0072BD color
 hold on;
-legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northwest');
+legend("RED1","RED2","RED3","RED4","RED5","RED6","RED8 KING SRCE","RED RG 2THT","RED RG 3THT","RED STRIP",'Location','northeast');
 % axis([450 700 0 1])
 axis([450 860 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
 title("RED AS7262 Emission Spectrum")
-% saveas(gcf,'RED1_AS7262_Emission_Spectrum.png')
+saveas(gcf,'RED_AS7262_Emission_Spectrum.png')
