@@ -28,7 +28,7 @@ plot(spectrum_W3_TL_xData,spectrum_W3_TL_yData, 'Color',[0, 0.4470, 0.7410]); % 
 hold on;
 plot(spectrum_WSTRIP_TL_xData,spectrum_WSTRIP_TL_yData, 'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
-legend("WHITE AS7263","WHITE Magnifying glass","WHITE NEXUS5X FLASH","WHITE STRIP",'NumColumns',3,'Location','southoutside');
+legend("WHITE AS7263","WHITE Magnifying glass","WHITE Nexus5X Flash","WHITE STRIP",'NumColumns',3,'Location','southoutside');
 %axis([300 700 0 inf])
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
@@ -45,7 +45,7 @@ plot(spectrum_W3_AS_xData,spectrum_W3_AS_yData, 'Color',[0, 0.4470, 0.7410]); % 
 hold on;
 plot(spectrum_WSTRIP_AS_xData,spectrum_WSTRIP_AS_yData, 'Color',[0.4660, 0.6740, 0.1880]); % #77AC30 color
 hold on;
-legend("WHITE AS7263","WHITE Magnifying glass","WHITE NEXUS5X FLASH","WHITE STRIP",'NumColumns',3,'Location','southoutside');
+legend("WHITE AS7263","WHITE Magnifying glass","WHITE Nexus5X Flash","WHITE STRIP",'NumColumns',3,'Location','southoutside');
 axis([450 650 0 1])
 xlabel("Wavelength [nm]");
 ylabel("Intensity (normalized)");
